@@ -1,0 +1,11 @@
+dgp_seed,method,test_root_pehe,alpha_selected_mean
+101,DR_Ridge_fitted_DEV_selected,0.3125696182250976,100000.0
+101,DR_Ridge_oracle_DEV_selected,0.1378645747900009,100000.0
+211,DR_Ridge_fitted_DEV_selected,0.23896708091100052,100000.0
+211,DR_Ridge_oracle_DEV_selected,0.1502392590045929,100000.0
+307,DR_Ridge_fitted_DEV_selected,0.3114501635233561,100000.0
+307,DR_Ridge_oracle_DEV_selected,0.1296166181564331,100000.0
+401,DR_Ridge_fitted_DEV_selected,0.29697316884994507,100000.0
+401,DR_Ridge_oracle_DEV_selected,0.164083331823349,100000.0
+503,DR_Ridge_fitted_DEV_selected,0.29483081400394434,100000.0
+503,DR_Ridge_oracle_DEV_selected,0.1505656093358993,100000.0

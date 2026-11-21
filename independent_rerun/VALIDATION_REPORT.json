@@ -1,0 +1,100 @@
+{
+  "created_utc": "2026-11-21T18:55:41.693744+00:00",
+  "stage4_backend": "cpu",
+  "stage4_unique_seed_pairs": 15,
+  "stage4_independent_dgp_seeds": 5,
+  "stage4_primary_gate": "PASS",
+  "stage4_archived_primary_gate": "PASS",
+  "stage4_gate_mean": -1.980784221490224,
+  "stage4_archived_gate_mean": -1.9679627259572345,
+  "stage4_categorical_gate_matches_archive": true,
+  "stage4_gate_ci95_low": -2.2018509030342104,
+  "stage4_gate_ci95_high": -1.722441824277242,
+  "strict_numerical_comparison_pass": false,
+  "strict_numerical_failed_checks": 18,
+  "rtol": 0.001,
+  "atol": 1e-06,
+  "fair_neural_independent_dgp_seeds": 12,
+  "fair_neural_regimes": 2,
+  "fair_neural_validation": "PASS",
+  "selected_stage_retraining": {
+    "stage6a": {
+      "status": "COMPLETE",
+      "expected_seed_pairs": 10,
+      "decision_status": "CANDIDATE_FROZEN_FOR_STAGE6B",
+      "archived_decision_status": "CANDIDATE_FROZEN_FOR_STAGE6B",
+      "grid_complete": true,
+      "run_utc": "2026-11-21T18:52:58+00:00",
+      "gates": null,
+      "selected_candidate": "AOSR_X_gamma2",
+      "categorical_decision_matches_archive": true,
+      "strict_numerical_comparison_pass": false,
+      "strict_numerical_failed_checks": 11
+    },
+    "stage6b": {
+      "status": "COMPLETE",
+      "expected_seed_pairs": 15,
+      "decision_status": "CONFIRMATORY_MIXED_OR_FAIL",
+      "archived_decision_status": "CONFIRMATORY_MIXED_OR_FAIL",
+      "grid_complete": true,
+      "run_utc": "2026-11-21T18:26:46+00:00",
+      "gates": {
+        "gate1_null_guard": true,
+        "gate2_within_10pct_X": true,
+        "gate3_better_than_CM_OSR_ci": true,
+        "gate4_better_than_early_fusion_ci": true,
+        "gate4_better_than_generic_attention_ci": true,
+        "gate4_better_than_generic_MoE_ci": true,
+        "gate5_support_selectivity_ci": false,
+        "gate6_nonzero_routed_correction": true,
+        "all_confirmatory_gates_pass": false
+      },
+      "selected_candidate": "AOSR_X_gamma2",
+      "categorical_decision_matches_archive": true,
+      "strict_numerical_comparison_pass": false,
+      "strict_numerical_failed_checks": 17
+    },
+    "stage6c": {
+      "status": "COMPLETE",
+      "expected_seed_pairs": 10,
+      "decision_status": "WEAK_METHOD_INCREMENT_DO_NOT_POSITION_AS_PRIMARY_NOVEL_TECHNIQUE",
+      "archived_decision_status": "WEAK_METHOD_INCREMENT_DO_NOT_POSITION_AS_PRIMARY_NOVEL_TECHNIQUE",
+      "grid_complete": true,
+      "run_utc": "2026-11-21T16:53:24+00:00",
+      "gates": {
+        "H1_orthogonal_residual_target": false,
+        "H2_anchor_residual_vs_direct": true,
+        "H3_learned_routing": false,
+        "H4_anchor_noninferiority_10pct": true,
+        "H5_incremental_value_in_at_least_one_localized_regime": false,
+        "H6_router_localization": false
+      },
+      "selected_candidate": null,
+      "categorical_decision_matches_archive": true,
+      "strict_numerical_comparison_pass": false,
+      "strict_numerical_failed_checks": 11
+    },
+    "stage7b": {
+      "status": "COMPLETE",
+      "expected_seed_pairs": 12,
+      "decision_status": "STAGE7B_DEVELOPMENT_NOT_STRONG_ENOUGH_STOP_BEFORE_CONFIRMATORY",
+      "archived_decision_status": "STAGE7B_DEVELOPMENT_NOT_STRONG_ENOUGH_STOP_BEFORE_CONFIRMATORY",
+      "grid_complete": true,
+      "run_utc": "2026-11-21T09:04:35+00:00",
+      "gates": {
+        "D1_incremental_vs_anchor": true,
+        "D2_switching_vs_fullX": true,
+        "D3_negative_control": true,
+        "D4_switching_localization": false,
+        "D5_nontrivial_use": false,
+        "D6_at_least_one_certified_candidate": false
+      },
+      "selected_candidate": null,
+      "categorical_decision_matches_archive": true,
+      "strict_numerical_comparison_pass": false,
+      "strict_numerical_failed_checks": 13
+    }
+  },
+  "individual_predictions_or_patient_data_included": false,
+  "scientific_note": "Technical completion and scientific stability are reported separately. Post-review neural results are not prespecified."
+}

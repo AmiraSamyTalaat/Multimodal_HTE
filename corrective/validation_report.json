@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-11-21T04:05:23.355518+00:00",
+  "archive": "B01_P1_PUBLICATION_SAFE_CODE_AGGREGATES.zip",
+  "archive_sha256": "3e9ca9718e30ade40b73d2af5fbb1f753e0bdfc3823811873d6c9947534cf52c",
+  "files": 524,
+  "patient_level_files": 0,
+  "forbidden_files": [],
+  "review": "GEO public access does not clear all contributor IP; aggregate-only release candidate; no publication performed"
+}

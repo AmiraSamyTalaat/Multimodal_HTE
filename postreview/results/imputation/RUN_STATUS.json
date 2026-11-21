@@ -1,0 +1,12 @@
+{
+  "stage": "IMPUTATION_DIAGNOSTICS_POSTREVIEW",
+  "status": "COMPLETE",
+  "finished_utc": "2026-11-20T15:59:35.385730+00:00",
+  "code_sha256": "5a86f1ff5caee69deb1423def00b674351d8822437e77600104871496e08de38",
+  "data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+  "methods": [
+    "zero after TRAIN-only standardization",
+    "10-nearest clinical donors from TRAIN only"
+  ],
+  "scope": "Feature reconstruction diagnostic on originally generated DEV/TEST masks; no treatment-effect model retraining yet"
+}

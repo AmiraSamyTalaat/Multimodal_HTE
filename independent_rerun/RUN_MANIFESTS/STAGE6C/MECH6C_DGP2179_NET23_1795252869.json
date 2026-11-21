@@ -1,0 +1,21 @@
+{
+  "stage": "STAGE6C_MECHANISM_GENERALIZATION",
+  "purpose": "secondary mechanism validation",
+  "dgp_seed": 2179,
+  "net_seed": 23,
+  "training_split": "TRAIN_ONLY",
+  "evaluation_split": "DEV_ONLY_SECONDARY_MECHANISM",
+  "test_accessed": false,
+  "candidate_reselection": false,
+  "gamma_changed": false,
+  "seed_search": false,
+  "regimes": [
+    "shared_effect_modifier",
+    "transcriptome_local_effect_modifier",
+    "RPPA_local_effect_modifier"
+  ],
+  "device": "cpu",
+  "status": "COMPLETE",
+  "started": 1795252869.5519981,
+  "finished": 1795254097.9489188
+}

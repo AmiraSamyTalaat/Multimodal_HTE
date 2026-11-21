@@ -1,0 +1,10 @@
+# Verified local Windows runtime on 2026-11-20
+# Python 3.14.2 (interpreter prerequisite; not a pip package)
+numpy==2.4.1
+scipy==1.17.0
+scikit-learn==1.8.0
+pandas==2.3.3
+kaggle==2.2.4
+matplotlib==3.10.8
+# Kaggle smoke runtime: Python 3.13.16, torch 2.11.0+cu130,
+# numpy 2.1.3, scipy 1.16.3, scikit-learn 1.6.1, pandas 2.3.3.

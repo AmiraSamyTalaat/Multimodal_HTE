@@ -1,0 +1,14 @@
+{
+  "id": "prinprin/b01-p1-postreview-classical-sensitivity",
+  "title": "b01 p1 postreview classical sensitivity",
+  "code_file": "b01_p1_classical_sensitivity.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": ["prinprin/b01-causaltx-mm-core-runtime"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

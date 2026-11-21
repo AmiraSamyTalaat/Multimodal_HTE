@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "date_utc": "2026-11-20T16:00:50.209863+00:00",
+  "code_sha256": "52cd6897c98787d50892f16a7e5f52392874068cd84fade50a02917f7bd16984",
+  "data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+  "scope": "Prespecified DGP e(X) calibration against simulated treatment assignments on TRAIN and DEV only"
+}

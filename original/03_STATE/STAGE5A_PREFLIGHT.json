@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "primary_pairs_found": 15,
+  "primary_grid_rerun_forbidden": true,
+  "scientific_training_started_by_preflight": false,
+  "next": "RUN_STAGE5A_KAGGLE_AUTOPILOT_B01.cmd"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "finished_utc": "2026-11-20T16:40:35.320374+00:00",
+  "code_sha256": "6c59abc12d49aebd19256e9b86747eae67e4499f7665e4f77a1354f49540dc36",
+  "data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+  "scope": "Pure propensity-scale contrast with shared CATE/mu; diagnostics only",
+  "n_dgp": 5,
+  "common_random_numbers": "treatment draws use shared uniforms per DGP"
+}

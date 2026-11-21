@@ -1,0 +1,16 @@
+{
+  "id": "prinprin/b01-p1-postreview-fairness-dgp401",
+  "title": "b01 p1 postreview fairness dgp401",
+  "code_file": "b01_p1_bagged_fairness.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": [
+    "prinprin/b01-causaltx-mm-core-runtime"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

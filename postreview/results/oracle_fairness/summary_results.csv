@@ -1,0 +1,3 @@
+method,mean_test_root_pehe,sd_across_dgp,n_dgp
+DR_Ridge_fitted_DEV_selected,0.2909581691026687,0.030171291902874094,5
+DR_Ridge_oracle_DEV_selected,0.14647387862205502,0.01322214557652068,5

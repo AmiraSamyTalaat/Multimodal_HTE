@@ -1,0 +1,11 @@
+regime,truth_definition,n_evaluations,n_oracle_positive,n_oracle_negative,TP,FP,TN,FN,TPR,FPR,oracle_positive_pct
+JOINT_MOLECULAR_SYNERGY,known_nonclinical_effect_source,1764,1764,0,0,0,0,1764,0.0,,100.0
+JOINT_MOLECULAR_SYNERGY,oracle_any_candidate_improves_CATE_squared_error,1764,227,1537,0,0,1537,227,0.0,0.0,12.868480725623582
+NO_INCREMENTAL_MOLECULAR_SIGNAL,known_nonclinical_effect_source,1764,0,1764,0,0,1764,0,,0.0,0.0
+NO_INCREMENTAL_MOLECULAR_SIGNAL,oracle_any_candidate_improves_CATE_squared_error,1764,165,1599,0,0,1599,165,0.0,0.0,9.353741496598639
+PATIENT_SUBGROUP_SWITCHING,known_nonclinical_effect_source,1764,1764,0,0,0,0,1764,0.0,,100.0
+PATIENT_SUBGROUP_SWITCHING,oracle_any_candidate_improves_CATE_squared_error,1764,222,1542,0,0,1542,222,0.0,0.0,12.585034013605442
+RPPA_INCREMENTAL,known_nonclinical_effect_source,1764,1764,0,0,0,0,1764,0.0,,100.0
+RPPA_INCREMENTAL,oracle_any_candidate_improves_CATE_squared_error,1764,214,1550,0,0,1550,214,0.0,0.0,12.131519274376418
+TRANSCRIPTOME_INCREMENTAL,known_nonclinical_effect_source,1764,1764,0,0,0,0,1764,0.0,,100.0
+TRANSCRIPTOME_INCREMENTAL,oracle_any_candidate_improves_CATE_squared_error,1764,184,1580,0,0,1580,184,0.0,0.0,10.430839002267573

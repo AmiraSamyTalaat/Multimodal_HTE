@@ -1,0 +1,15 @@
+{
+  "mean": -1.9679627259572345,
+  "ci95_low": -2.199145666758219,
+  "ci95_high": -1.691622519493103,
+  "n_clusters": 5,
+  "bootstrap_B": 10000,
+  "comparison": "CM_OSR - early_fusion_DR_capacity_matched root_PEHE",
+  "direction": "negative_favors_CM_OSR",
+  "required_seed_pairs": 15,
+  "observed_seed_pairs": 15,
+  "required_dgp_clusters": 5,
+  "observed_dgp_clusters": 5,
+  "grid_complete": true,
+  "primary_gate": "PASS"
+}

@@ -1,0 +1,56 @@
+{
+  "stage": "stage6b",
+  "backend": "cpu",
+  "batches": [
+    {
+      "slug": "b01-p1-independent-stage6b-smoke-cpu",
+      "completed_utc": "2026-11-21T07:55:44+00:00",
+      "checkpoint_sha256": "ec6f865bb5c8c3464a4d5335450f67dffe4997bc75df957a9068e2b16b7f9857",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 1
+    },
+    {
+      "slug": "b01-p1-independent-stage6b-batch1-cpu",
+      "completed_utc": "2026-11-21T08:58:06+00:00",
+      "checkpoint_sha256": "38f83db58327e3f28ffbd0fe38fe20722d3173e00dda29d96c3d0c7acf228ac6",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 4
+    },
+    {
+      "slug": "b01-p1-independent-stage6b-batch2-cpu",
+      "completed_utc": "2026-11-21T09:52:07+00:00",
+      "checkpoint_sha256": "80b0c8004c91550c3a4fb7ac510b6ca59b53fc956b1a3ec8733c9e62a69a18fd",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 7
+    },
+    {
+      "slug": "b01-p1-independent-stage6b-batch3-cpu",
+      "completed_utc": "2026-11-21T16:45:41+00:00",
+      "checkpoint_sha256": "1abb3e7797b82f97d013061cc9e6ae094aa98845febdae0638aff5b6d25fd368",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 10
+    },
+    {
+      "slug": "b01-p1-independent-stage6b-batch4-cpu",
+      "completed_utc": "2026-11-21T17:46:32+00:00",
+      "checkpoint_sha256": "5f9caf0d97cb878775306e507a3bfcb8b657fa632c153114398020f1f3c89abb",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 13
+    },
+    {
+      "slug": "b01-p1-independent-stage6b-batch5-cpu",
+      "completed_utc": "2026-11-21T18:24:56+00:00",
+      "checkpoint_sha256": "8642f6e8ff979a2de0ad5d730ee6689d4da63da23ccf3c7c92652389ece6e4e2",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 15
+    },
+    {
+      "slug": "b01-p1-independent-stage6b-aggregate-cpu",
+      "completed_utc": "2026-11-21T18:26:46+00:00",
+      "checkpoint_sha256": "2b1f403b0aa3cdce2a3dd79d4ee1eece85303f7af1020aef20e481afbf29c538",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 17
+    }
+  ],
+  "updated_utc": "2026-11-21T18:27:31+00:00"
+}

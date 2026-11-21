@@ -1,0 +1,60 @@
+stage: STAGE6B_CONFIRMATORY
+status: LOCKED_BEFORE_STAGE6B_RESULTS
+selected_candidate: AOSR_X_gamma2
+selection_source: STAGE6A_SELECTION.json
+selection_was_dev_only: true
+evaluation_split: TEST_ONCE
+training_split: TRAIN_ONLY
+development_dgp_seeds_not_reused: [607, 719, 823, 941, 1061]
+confirmatory_dgp_seeds: [1201, 1327, 1451, 1579, 1699]
+confirmatory_network_seeds: [17, 29, 43]
+conditions:
+  - PRIMARY_CROSS_MODAL
+  - SEVERE_WEAK_OVERLAP
+  - MCAR_40
+  - MAR_CLINICAL
+  - NULL_EFFECT_NEGATIVE_CONTROL
+methods:
+  - AOSR_X_gamma2
+  - CM_OSR_v1_frozen_reference
+  - CMOSR_support_shrink_gamma2_predeclared_control
+  - X_learner_frozen_reference
+  - T_learner_frozen_reference
+  - DR_learner_frozen_reference
+  - R_learner_frozen_reference
+  - early_fusion_DR_capacity_matched
+  - generic_multimodal_attention_DR_capacity_matched
+  - generic_MoE_DR_capacity_matched
+confirmatory_gates:
+  gate_1_null_guard: "AOSR mean_abs_tau_hat on NULL <= 2.0 * min(X,T) on same Stage6B TEST runs"
+  gate_2_point_estimation_competitiveness: "AOSR mean root_PEHE across four non-null TEST conditions <= 1.10 * X-learner"
+  gate_3_improves_frozen_CM_OSR: "paired DGP-cluster bootstrap 95% CI for AOSR-CM_OSR pooled non-null root_PEHE has upper bound < 0"
+  gate_4_multimodal_architecture_advantage: "same CI rule versus early-fusion, generic attention and generic MoE"
+  gate_5_support_selectivity: "paired DGP-cluster bootstrap 95% CI for retained50%-retained100% pooled non-null root_PEHE has upper bound < 0"
+  gate_6_no_degenerate_correction: "mean absolute routed correction > 1e-4 on non-null TEST"
+bootstrap:
+  B: 10000
+  seed: 20260923
+  cluster: dgp_seed
+coverage:
+  nominal: 0.90
+  calibration_split: DEV
+  evaluation_split: TEST
+  scope: semi_synthetic_true_tau_only
+missingness:
+  clinical_always_available: true
+  MCAR_40: 0.40
+  MAR_base: 0.10
+  MAR_clinical_slope: 0.25
+  imputation: zero_after_train_only_standardization
+  same_mask_across_methods_within_dgp_condition_split: true
+prohibitions:
+  - no_retuning_after_stage6b_results
+  - no_seed_search
+  - no_candidate_switch
+  - no_stage6a_or_primary_replacement
+  - no_test_threshold_tuning
+  - no_TRIO_selection
+  - no_deleting_unfavorable_controls
+next_if_pass: MECHANISM_ABLATIONS_FOR_FROZEN_AOSR_THEN_CHER_LOB_THEN_LOCKED_TRIO
+next_if_fail: DO_NOT_FORCE_STRONG_METHOD_CLAIM; inspect failed gate transparently

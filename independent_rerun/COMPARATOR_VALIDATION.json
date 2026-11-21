@@ -1,0 +1,33 @@
+{
+  "utc": "2026-11-21T18:29:11.991552+00:00",
+  "comparator_sha256": "0340a06a31bab8c7e0f0f72a74a706aaf8c0d4341fdd3de9187a1eae6918eae4",
+  "rtol": 0.001,
+  "atol": 1e-06,
+  "checks": [
+    {
+      "table": "STAGE6A/ALL_STAGE6A_DEV_METRICS.csv",
+      "rows": 500,
+      "reversed_rows_pass": true,
+      "modified_metric_fails": true,
+      "blank_capable_numeric_metric_compared": true,
+      "pass": true
+    },
+    {
+      "table": "STAGE6B/ALL_STAGE6B_TEST_METRICS.csv",
+      "rows": 750,
+      "reversed_rows_pass": true,
+      "modified_metric_fails": true,
+      "blank_capable_numeric_metric_compared": true,
+      "pass": true
+    },
+    {
+      "table": "STAGE6C/ALL_STAGE6C_MECHANISM_DEV_METRICS.csv",
+      "rows": 330,
+      "reversed_rows_pass": true,
+      "modified_metric_fails": true,
+      "blank_capable_numeric_metric_compared": true,
+      "pass": true
+    }
+  ],
+  "status": "PASS"
+}

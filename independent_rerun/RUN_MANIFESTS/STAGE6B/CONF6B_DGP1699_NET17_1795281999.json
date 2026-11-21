@@ -1,0 +1,17 @@
+{
+  "stage": "STAGE6B_CONFIRMATORY",
+  "dgp_seed": 1699,
+  "net_seed": 17,
+  "selected_candidate": "AOSR_X_gamma2",
+  "training_split": "TRAIN_ONLY",
+  "evaluation_split": "TEST_ONCE",
+  "candidate_retuned": false,
+  "test_used_for_selection": false,
+  "stage3_primary_rerun": false,
+  "stage5a_rerun": false,
+  "stage6a_rerun": false,
+  "device": "cpu",
+  "status": "COMPLETE",
+  "started": 1795281999.7217042,
+  "finished": 1795283191.4260454
+}

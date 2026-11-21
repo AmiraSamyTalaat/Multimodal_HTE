@@ -1,0 +1,32 @@
+{
+  "dgp_seed": 211,
+  "status": "COMPLETE",
+  "started_utc": "2026-11-20T15:35:36.086623+00:00",
+  "finished_utc": "2026-11-20T15:36:18.288661+00:00",
+  "train_size": 441,
+  "dev_size": 147,
+  "test_size": 148,
+  "split_seed": 20260918,
+  "source_data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+  "train_treated": 218,
+  "train_control": 223,
+  "train_estimated_ate": 0.27280569076538086,
+  "train_estimated_ate_method": "mean 5-fold cross-fitted DR pseudo-outcome on TRAIN; nuisance clip 0.05-0.95",
+  "crude_train_arm_difference": 0.20640144814251044,
+  "oracle_constant_definition": "mean true CATE on TEST; reference lower bound only; never fit a deployable model",
+  "clinical_models": "original cm_osr.baselines.TLearner and XLearner with clinical features only; fit TRAIN; fixed hyperparameters; DEV unused",
+  "training_access": "TRAIN only; oracle constant uses TEST truth only for a nondeployable reference",
+  "software": {
+    "python": "3.14.2",
+    "numpy": "2.4.1",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0",
+    "pandas": "2.3.3"
+  },
+  "source_code_sha256": {
+    "01_CODE\\cm_osr\\baselines.py": "706808f54bfc6d8de078ae6dc156a2f070a77289da0ddcfe308ef768544dffa8",
+    "01_CODE\\cm_osr\\dgp.py": "e355d7a893720cf1d63fbfb338e6107ad08dc9db67f0f902d6df33d2b86640a6",
+    "01_CODE\\cm_osr\\splits.py": "933ad82049b4f8c92ffd04a9ab7b5651b9647f6c217061b32a5580ddab2708ba",
+    "01_CODE\\cm_osr\\nuisance.py": "d579f16581d1d5eb400a6154d1b8ae90840318dff4139f2f9a0ee85db82d5f4c"
+  }
+}

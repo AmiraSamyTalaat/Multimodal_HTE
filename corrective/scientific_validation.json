@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "run_utc": "2026-11-21T04:04:26.843248+00:00",
+  "checks": [
+    {
+      "check": "original_and_snapshot_immutable",
+      "pass_check": true,
+      "detail": "309 files; snapshot mismatches 0, original mismatches 0, missing 0"
+    },
+    {
+      "check": "private_kaggle_core_code_matches_snapshot",
+      "pass_check": true,
+      "detail": "9/9 downloaded core modules match SHA-256"
+    },
+    {
+      "check": "clinical_adjustment_complete",
+      "pass_check": true,
+      "detail": "5/5"
+    },
+    {
+      "check": "nonoracle_tuning_complete",
+      "pass_check": true,
+      "detail": "5/5"
+    },
+    {
+      "check": "fixed_dgp_splits_complete",
+      "pass_check": true,
+      "detail": "72/72"
+    },
+    {
+      "check": "fair_neural_complete",
+      "pass_check": true,
+      "detail": "24/24"
+    },
+    {
+      "check": "fixed_dgp_truth_unchanged",
+      "pass_check": true,
+      "detail": "24 seed-regime pairs; three resplits each"
+    },
+    {
+      "check": "kaggle_windows_numerical_match",
+      "pass_check": true,
+      "detail": "24 units; max zero-effect Root-PEHE difference 1.29e-09; exact byte hash match 0/24"
+    },
+    {
+      "check": "deployed_parameter_match",
+      "pass_check": true,
+      "detail": "bag/CM deployed parameter ratio range 1.0046–1.0046; optimizer steps remain unequal"
+    },
+    {
+      "check": "clinical_metrics_finite",
+      "pass_check": true,
+      "detail": "45 rows; Root-PEHE range 0.1366–0.2161"
+    },
+    {
+      "check": "nonoracle_metrics_finite",
+      "pass_check": true,
+      "detail": "40 rows; Root-PEHE range 0.1478–0.225"
+    },
+    {
+      "check": "fixed_metrics_finite",
+      "pass_check": true,
+      "detail": "504 rows; Root-PEHE range 0.03328–0.2042"
+    },
+    {
+      "check": "fair_metrics_finite",
+      "pass_check": true,
+      "detail": "264 rows; Root-PEHE range 0.06221–3.615"
+    },
+    {
+      "check": "fair_dgp_cluster_ci",
+      "pass_check": true,
+      "detail": "22 summary rows; DGP counts [np.int64(12)]"
+    },
+    {
+      "check": "reporting_definitions",
+      "pass_check": true,
+      "detail": "PASS"
+    }
+  ],
+  "source_data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+  "interpretation": "Validation verifies provenance, arithmetic and protocol invariants; it does not prove causal identification or generalization"
+}

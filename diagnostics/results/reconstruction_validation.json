@@ -1,0 +1,14 @@
+{
+  "source_archives_sha256": "4ed4f04fed836bf78224a340958ea2bbcb2a84d194017f8d347ca3a58dbdae39",
+  "original_test_files": 15,
+  "source_rows": 8820,
+  "recomputed_stage4_values": 675,
+  "recomputed_stage4_all_within_tolerance": true,
+  "atol": 1e-06,
+  "rtol": 0.001,
+  "archived_primary_delta": -1.9679627259572345,
+  "recomputed_primary_delta": -1.967962689951482,
+  "stages_independently_retrained": 0,
+  "archived_results_recomputed_from_saved_predictions": true,
+  "interpretation": "Metric reconstruction and archival integrity check only; NOT independent retraining of the original pipeline."
+}

@@ -1,0 +1,29 @@
+{
+  "stage": "STAGE6C_MECHANISM_GENERALIZATION",
+  "grid_complete": true,
+  "observed_pairs": 10,
+  "required_pairs": 10,
+  "frozen_method": "AOSR_X_gamma2",
+  "training_split": "TRAIN_ONLY",
+  "evaluation_split": "DEV_ONLY_SECONDARY_MECHANISM",
+  "test_accessed": false,
+  "candidate_reselection": false,
+  "regimes": [
+    "shared_effect_modifier",
+    "transcriptome_local_effect_modifier",
+    "RPPA_local_effect_modifier"
+  ],
+  "full_mean_root_pehe": 0.17609947820504504,
+  "anchor_only_mean_root_pehe": 0.17114983201026915,
+  "gates": {
+    "H1_orthogonal_residual_target": false,
+    "H2_anchor_residual_vs_direct": true,
+    "H3_learned_routing": false,
+    "H4_anchor_noninferiority_10pct": true,
+    "H5_incremental_value_in_at_least_one_localized_regime": false,
+    "H6_router_localization": false
+  },
+  "status": "WEAK_METHOD_INCREMENT_DO_NOT_POSITION_AS_PRIMARY_NOVEL_TECHNIQUE",
+  "next": "DO_NOT_FORCE_Q1_METHOD_CLAIM; REFRAME_OR_STOP_BEFORE_REAL_TRIAL_PRIMARY_METHOD_POSITIONING",
+  "note": "Secondary mechanism validation on originally prespecified unused DGP regimes; Stage6B remains unchanged."
+}

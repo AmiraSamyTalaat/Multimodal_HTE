@@ -1,0 +1,9 @@
+{
+  "stage": "ADDITIONAL_DIAGNOSTICS_POSTREVIEW",
+  "status": "COMPLETE",
+  "finished_utc": "2026-11-20T15:48:14.284975+00:00",
+  "code_sha256": "97b9f7579e1cdf4eec541f91df5b7c37f8099d30b50e82d9f84698cb4c04708c",
+  "data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+  "original_stage5a_mask_comparison_errors": [],
+  "scope": "Read-only DGP reconstruction and Stage7B DEV prediction audit; no model training"
+}

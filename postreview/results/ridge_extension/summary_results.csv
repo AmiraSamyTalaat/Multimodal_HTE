@@ -1,0 +1,3 @@
+method,mean_test_root_pehe,sd_across_dgp,mean_policy_regret,n_independent_dgp,mcse_test_root_pehe
+DR_Ridge_fitted_extended_DEV_selected,0.2534227301677068,0.02628595061901562,0.042788244287172914,5,0.01175543448746432
+DR_Ridge_oracle_extended_DEV_selected,0.1397994157124977,0.007903874983614419,0.0174561589956283,5,0.0035347203498043754

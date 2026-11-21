@@ -1,0 +1,13 @@
+{
+  "software": {
+    "python": "3.13.16",
+    "torch": "2.11.0+cu130",
+    "numpy": "2.1.3",
+    "scipy": "1.16.3",
+    "sklearn": "1.6.1",
+    "pandas": "2.3.3"
+  },
+  "source": "Previous private B01 fairness Kaggle run on the same account/project",
+  "source_file": "B01_POST_REVIEW_2026/runs/kaggle_fairness_dgp101/postreview_results/RUN_STATUS.json",
+  "qualification": "Reference environment only; the corrective kernels did not persist an exact pip freeze. Requirements and generated scripts are included; environment drift may affect exact bytes."
+}

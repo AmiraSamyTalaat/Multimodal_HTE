@@ -1,0 +1,21 @@
+{
+  "stage": "STAGE6C_MECHANISM_GENERALIZATION",
+  "purpose": "secondary mechanism validation",
+  "dgp_seed": 1811,
+  "net_seed": 23,
+  "training_split": "TRAIN_ONLY",
+  "evaluation_split": "DEV_ONLY_SECONDARY_MECHANISM",
+  "test_accessed": false,
+  "candidate_reselection": false,
+  "gamma_changed": false,
+  "seed_search": false,
+  "regimes": [
+    "shared_effect_modifier",
+    "transcriptome_local_effect_modifier",
+    "RPPA_local_effect_modifier"
+  ],
+  "device": "cuda",
+  "status": "COMPLETE",
+  "started": 1791445334.9240587,
+  "finished": 1791446184.5575197
+}

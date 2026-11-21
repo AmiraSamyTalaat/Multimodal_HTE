@@ -1,0 +1,42 @@
+{
+  "stage": "stage6c",
+  "backend": "cpu",
+  "batches": [
+    {
+      "slug": "b01-p1-independent-stage6c-smoke-cpu",
+      "completed_utc": "2026-11-21T07:48:44+00:00",
+      "checkpoint_sha256": "f5e9f5c7d23ae4740d104d5f115c346049b43f5d38baaca523a2d163f5112863",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 1
+    },
+    {
+      "slug": "b01-p1-independent-stage6c-batch1-cpu",
+      "completed_utc": "2026-11-21T08:39:12+00:00",
+      "checkpoint_sha256": "207ddd7180809336c1adb2719bf07f1ec306f0d8885edcc5f3790aabd6a6f8db",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 4
+    },
+    {
+      "slug": "b01-p1-independent-stage6c-batch2-cpu",
+      "completed_utc": "2026-11-21T09:41:39+00:00",
+      "checkpoint_sha256": "941f3c454573b9fc3a9d6c75c769031a022769c6c7c1cca49d034b6b8a836eae",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 7
+    },
+    {
+      "slug": "b01-p1-independent-stage6c-batch3-cpu",
+      "completed_utc": "2026-11-21T16:51:36+00:00",
+      "checkpoint_sha256": "e9071db13f675a599f1dc707d431a0796de560fcd416e84e930888c3e701c8d9",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 10
+    },
+    {
+      "slug": "b01-p1-independent-stage6c-aggregate-cpu",
+      "completed_utc": "2026-11-21T16:53:24+00:00",
+      "checkpoint_sha256": "510950be2d7641debbefb7b70d376164cac430f258f123df6b4f39ff6cd3a15d",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 11
+    }
+  ],
+  "updated_utc": "2026-11-21T16:53:59+00:00"
+}

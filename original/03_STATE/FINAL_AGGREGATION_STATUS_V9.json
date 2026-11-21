@@ -1,0 +1,73 @@
+{
+  "expected_pairs": [
+    [
+      101,
+      17
+    ],
+    [
+      101,
+      29
+    ],
+    [
+      101,
+      43
+    ],
+    [
+      211,
+      17
+    ],
+    [
+      211,
+      29
+    ],
+    [
+      211,
+      43
+    ],
+    [
+      307,
+      17
+    ],
+    [
+      307,
+      29
+    ],
+    [
+      307,
+      43
+    ],
+    [
+      401,
+      17
+    ],
+    [
+      401,
+      29
+    ],
+    [
+      401,
+      43
+    ],
+    [
+      503,
+      17
+    ],
+    [
+      503,
+      29
+    ],
+    [
+      503,
+      43
+    ]
+  ],
+  "complete_expected_pairs": 15,
+  "missing_expected_pairs": [],
+  "extra_pairs": [],
+  "scientific_settings_changed": false,
+  "kaggle_launched": false,
+  "training_started": false,
+  "aggregation_returncode": 0,
+  "all_core_metrics_exists": true,
+  "primary_gate_exists": true
+}

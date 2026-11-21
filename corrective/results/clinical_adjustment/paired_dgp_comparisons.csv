@@ -1,0 +1,8 @@
+method_a,method_b,difference,mean,mcse_dgp,ci95_lower,ci95_upper,n_independent_dgp
+clinical_R_full_fitted_Rloss_selected,archived_clinical_X,Root-PEHE(a)-Root-PEHE(b),-0.008426978880842245,0.005414261792715927,-0.023459379533487812,0.006605421771803321,5
+clinical_R_full_fitted_Rloss_selected,archived_clinical_T,Root-PEHE(a)-Root-PEHE(b),-0.010140921931117519,0.005225504633541432,-0.024649248693102015,0.004367404830866978,5
+clinical_R_full_fitted_Rloss_selected,archived_full_X,Root-PEHE(a)-Root-PEHE(b),-0.027063818163446857,0.01162504136289355,-0.059340107353174534,0.005212471026280821,5
+clinical_R_full_fitted_Rloss_selected,archived_full_T,Root-PEHE(a)-Root-PEHE(b),-0.041341062755704774,0.011463602228449216,-0.07316912505081712,-0.009513000460592433,5
+clinical_R_full_fitted_Rloss_selected,archived_zero_effect,Root-PEHE(a)-Root-PEHE(b),-0.0012616078705581513,0.006254641643214093,-0.018627277045626202,0.0161040613045099,5
+clinical_R_full_fitted_Rloss_selected,clinical_R_clinical_fitted_Rloss_selected,Root-PEHE(a)-Root-PEHE(b),0.0013048839025197212,0.008537591311146881,-0.02239926970349325,0.025009037508532693,5
+clinical_R_full_fitted_Rloss_selected,clinical_R_oracle_true_simulation_Rloss_selected,Root-PEHE(a)-Root-PEHE(b),0.0013840345182128233,0.01461664344007989,-0.03919827361541842,0.041966342651844075,5

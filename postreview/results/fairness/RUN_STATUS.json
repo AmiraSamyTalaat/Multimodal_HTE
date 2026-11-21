@@ -1,0 +1,10 @@
+{
+  "stage": "FAIR_BAGGED_EARLY_FUSION_POSTREVIEW",
+  "status": "COMPLETE",
+  "completed_batches": 5,
+  "expected_batches": 5,
+  "completed_run_pairs": 15,
+  "expected_run_pairs": 15,
+  "independence": "DGP seeds are clusters; 3 network seeds per DGP are not independent",
+  "last_updated_utc": "2026-11-20T16:07:30.349623+00:00"
+}

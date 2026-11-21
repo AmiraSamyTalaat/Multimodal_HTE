@@ -1,0 +1,73 @@
+stage: STAGE6C_MECHANISM_GENERALIZATION
+status: LOCKED_BEFORE_STAGE6C_RESULTS
+purpose: secondary mechanism validation of frozen AOSR_X_gamma2; not candidate reselection
+frozen_method: AOSR_X_gamma2
+test_policy: TEST_FORBIDDEN_STAGE6C
+training_split: TRAIN_ONLY
+evaluation_split: DEV_ONLY_SECONDARY_MECHANISM
+dgp_regimes_source: 03_STATE/EXPERIMENT_CONTRACT.yaml prespecified before held-out
+  results
+regimes:
+- shared_effect_modifier
+- transcriptome_local_effect_modifier
+- RPPA_local_effect_modifier
+mechanism_dgp_seeds:
+- 1811
+- 1931
+- 2053
+- 2179
+- 2297
+mechanism_network_seeds:
+- 23
+- 41
+methods:
+- AOSR_FULL_FROZEN
+- ANCHOR_ONLY_X
+- AOSR_UNGATED_RESIDUAL
+- AOSR_UNIFORM_ROUTING
+- AOSR_NO_RELIABILITY_GATE
+- AOSR_NO_DENSITY_GATE
+- AOSR_NO_OVERLAP_GATE
+- AOSR_NO_JOINT_EXPERT
+- AOSR_NONORTHOGONAL_T_RESIDUAL
+- DIRECT_CM_OSR_DR
+- CMOSR_SUPPORT_SHRINK_GAMMA2_PREDECLARED_CONTROL
+primary_mechanism_hypotheses:
+  H1_orthogonal_residual_target: AOSR_FULL_FROZEN lower pooled DEV root_PEHE than
+    AOSR_NONORTHOGONAL_T_RESIDUAL; DGP-cluster bootstrap 95% CI upper < 0
+  H2_anchor_residual_vs_direct: AOSR_FULL_FROZEN lower pooled DEV root_PEHE than DIRECT_CM_OSR_DR;
+    DGP-cluster bootstrap 95% CI upper < 0
+  H3_learned_routing: AOSR_FULL_FROZEN lower pooled DEV root_PEHE than AOSR_UNIFORM_ROUTING;
+    DGP-cluster bootstrap 95% CI upper < 0
+  H4_anchor_noninferiority: pooled AOSR_FULL_FROZEN mean root_PEHE <= 1.10 * ANCHOR_ONLY_X
+    pooled mean root_PEHE
+  H5_incremental_value_localized: AOSR_FULL_FROZEN beats ANCHOR_ONLY_X with CI upper
+    < 0 in at least one of transcriptome-local or RPPA-local regimes
+  H6_router_localization: '[(w_transcriptomic-w_rppa) transcriptome-local] - [(w_transcriptomic-w_rppa)
+    RPPA-local] has 95% CI lower > 0'
+secondary_sensitivity_only:
+- AOSR_UNGATED_RESIDUAL
+- AOSR_NO_RELIABILITY_GATE
+- AOSR_NO_DENSITY_GATE
+- AOSR_NO_OVERLAP_GATE
+- AOSR_NO_JOINT_EXPERT
+- CMOSR_SUPPORT_SHRINK_GAMMA2_PREDECLARED_CONTROL
+interpretation_rule:
+  STRONG_MECHANISTIC_SUPPORT_FOR_NOVEL_TECHNIQUE: H1,H2,H3,H4,H5,H6 all pass
+  PARTIAL_MECHANISTIC_SUPPORT_REQUIRES_REAL_TRIAL_VALUE: H1,H2,H3,H4,H6 pass but H5
+    fails
+  WEAK_METHOD_INCREMENT_DO_NOT_POSITION_AS_PRIMARY_NOVEL_TECHNIQUE: otherwise
+bootstrap:
+  B: 10000
+  seed: 20261007
+  cluster: dgp_seed
+forbidden:
+- no_TEST_access
+- no_candidate_switch
+- no_gamma_change
+- no_threshold_tuning
+- no_seed_search
+- no_regime_dropping
+- no_support_shrink_promotion_to_primary_method
+- no_rewrite_of_Stage6B
+- report_all_locked_ablation_results

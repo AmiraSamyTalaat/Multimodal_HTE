@@ -1,0 +1,7 @@
+{
+  "source": "original/06_RESULTS/STAGE6A/STAGE6A_SELECTION.json",
+  "sha256": "fc2bde7f7c73b3ef39feb791dcecf0ed37790a63b62e5313ca9169d0291807b6",
+  "dependency_type": "frozen_archived_stage6a_selection",
+  "copied_utc": "2026-11-21T07:37:33+00:00",
+  "note": "Stage6A grid is not independently rerun in this Stage6B job; candidate remains frozen."
+}

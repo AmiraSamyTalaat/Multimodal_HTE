@@ -1,0 +1,48 @@
+{
+  "stage": "STAGE5A_RESULTS_AUDITOR_STATISTICIAN",
+  "grid_integrity": {
+    "unique_locked_pairs": 15,
+    "required_pairs": 15,
+    "all_run_manifests_complete": true,
+    "scientific_settings_changed": false,
+    "primary_grid_rerun": false,
+    "all_completed_runs_carry_fix_marker_MASKED_TRUE_TE_V1": true,
+    "missingness_masks_reproducible_across_network_seeds_within_dgp_condition_split": true
+  },
+  "H1_status": "REMAINS_PASS_FROM_LOCKED_PRIMARY_GATE",
+  "H2_status": "MIXED_PARTIAL_SUPPORT_NOT_YET_PASSED",
+  "H2_components": {
+    "direct_stress_performance_vs_capacity_matched_early_fusion_and_generic_multimodal_controls": "SUPPORTED",
+    "severe_weak_overlap_direct_performance_vs_generic_attention_and_MoE": "SUPPORTED",
+    "missing_modality_direct_performance_vs_generic_attention_and_MoE": "SUPPORTED",
+    "missing_modality_direct_performance_vs_availability_masked_generic_controls": "SUPPORTED",
+    "graceful_degradation_relative_to_generic_attention_MoE_from_clean_reference": "NOT_SUPPORTED",
+    "support_aware_selective_root_PEHE": "SUPPORTED",
+    "semi_synthetic_90pct_CATE_coverage": "SUPPORTED_DESCRIPTIVELY",
+    "null_effect_negative_control": "CONCERN_CM_OSR_SPURIOUS_EFFECT_MAGNITUDE",
+    "cross_study_shift_component": "NOT_TESTED_YET"
+  },
+  "important_limitation": "X-learner and regularized T-learner remain substantially lower-root-PEHE controls than CM-OSR across clean, severe-overlap, missingness, and null-effect conditions.",
+  "claim_boundary": {
+    "allowed_now": [
+      "CM-OSR outperformed capacity-matched early-fusion and generic multimodal DR architectures across the prespecified semi-synthetic stress conditions.",
+      "Support-based selective retention reduced CM-OSR root-PEHE as lower-support cases were removed.",
+      "The benchmark-only 90% CATE bands achieved approximately nominal coverage on known semi-synthetic tau."
+    ],
+    "not_allowed_now": [
+      "CM-OSR is the best overall HTE estimator or state of the art.",
+      "CM-OSR degrades more gracefully than generic attention/MoE under missingness.",
+      "CM-OSR passes the null-effect negative control.",
+      "CM-OSR is robust to cross-study shift.",
+      "Real-trial intervals are patient-level ITE confidence intervals."
+    ]
+  },
+  "next_decision": "PROCEED_TO_STAGE5B_PRESPECIFIED_MECHANISM_ABLATIONS_THEN_CHER_LOB_AND_LOCKED_TRIO_VALIDATION",
+  "strong_Q1_ready_now": false,
+  "reason_strong_Q1_not_ready": [
+    "H2 is mixed rather than fully supported.",
+    "The null-effect negative control is materially weaker for CM-OSR than X/T learners.",
+    "Cross-study shift and H3 remain untested.",
+    "Remaining prespecified mechanism ablations A4/A5/A6/random-router and A8 should be completed before final novelty claims."
+  ]
+}

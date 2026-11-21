@@ -1,0 +1,42 @@
+{
+  "status": "COMPLETE",
+  "updated_utc": "2026-11-21T04:04:14.121434+00:00",
+  "reporting_checks": "PASS",
+  "experiments": {
+    "clinical_adjustment": {
+      "status": "COMPLETE",
+      "completed_dgp": 5,
+      "expected_dgp": 5,
+      "updated_utc": "2026-11-21T04:03:22.604284+00:00",
+      "independence": "Five original DGP seeds; three archived network seeds are not independent"
+    },
+    "nonoracle_tuning": {
+      "status": "COMPLETE",
+      "completed_dgp": 5,
+      "expected_dgp": 5,
+      "updated_utc": "2026-11-21T04:03:28.178634+00:00",
+      "n_candidate_fits_per_dgp": 12,
+      "independence": "Five original DGP seeds; do not count network repeats"
+    },
+    "fixed_dgp_splits": {
+      "status": "COMPLETE",
+      "completed_units": 72,
+      "expected_units": 72,
+      "updated_utc": "2026-11-21T04:03:41.440162+00:00",
+      "independence": "DGP seed cluster n=12; three resplits share fixed TEST and DGP truth"
+    },
+    "fair_neural": {
+      "status": "COMPLETE",
+      "completed_units": 24,
+      "expected_units": 24,
+      "missing_units": [],
+      "updated_utc": "2026-11-21T04:03:56.670379+00:00",
+      "independence": "12 DGP seed clusters per effect regime; one TEST cohort, split and learner seed",
+      "cross_platform_note": "Exact CATE byte hashes can differ between Windows and Kaggle PCA numerical stacks; compare fixed TEST index hash and zero Root-PEHE within tolerance, never treat this as independent patient replication"
+    }
+  },
+  "source_data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+  "original_results_unchanged": true,
+  "zenodo_published": false,
+  "independence": "DGP seed; fixed-DGP resplits and learner seeds are repeated measurements"
+}

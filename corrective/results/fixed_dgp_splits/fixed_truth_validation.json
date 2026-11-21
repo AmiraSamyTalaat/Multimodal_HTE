@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-11-21T04:03:44.420439+00:00",
+  "completed_dgp_regime_pairs": 24,
+  "expected_pairs": 24,
+  "issues": [],
+  "interpretation": "A PASS on partial data validates completed pairs only; inference waits for all 72 units"
+}

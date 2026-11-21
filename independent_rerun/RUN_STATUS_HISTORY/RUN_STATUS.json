@@ -1,0 +1,19 @@
+{
+  "batches": [
+    {
+      "slug": "b01-p1-independent-stage4-batch1",
+      "completed_utc": "2026-11-21T08:16:53+00:00",
+      "checkpoint_sha256": "332c2504c0ab37c624f2444ec6d5e42018c160bb7b500dc03cda459f00a3a612",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 3
+    },
+    {
+      "slug": "b01-p1-independent-stage4-batch2",
+      "completed_utc": "2026-11-21T10:31:27+00:00",
+      "checkpoint_sha256": "afe08f85d847b8d533d2313a201df9967b62c3876efb611ce92fe7bf9c7309da",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 7
+    }
+  ],
+  "updated_utc": "2026-11-21T15:55:12+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "STAGE7B_CUCMR_DEVELOPMENT",
+  "dgp_seed": 2909,
+  "learner_seed": 31,
+  "fit_split": "TRAIN_ONLY",
+  "evaluation_split": "DEV_ONLY",
+  "test_accessed": false,
+  "confirmatory_seed_accessed": false,
+  "status": "COMPLETE",
+  "started": 1795250202.1252398,
+  "regimes": [
+    "NO_INCREMENTAL_MOLECULAR_SIGNAL",
+    "TRANSCRIPTOME_INCREMENTAL",
+    "RPPA_INCREMENTAL",
+    "JOINT_MOLECULAR_SYNERGY",
+    "PATIENT_SUBGROUP_SWITCHING"
+  ],
+  "finished": 1795250585.5837579
+}

@@ -1,0 +1,17 @@
+# Deterministic programmatic Figure 1.
+from pathlib import Path
+import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+import textwrap
+OUT=Path(__file__).resolve().parents[1]/'REPRODUCED_MANUSCRIPT_OUTPUTS'; OUT.mkdir(exist_ok=True)
+fig,ax=plt.subplots(figsize=(11,7.4)); ax.set_xlim(0,11); ax.set_ylim(0,7.4); ax.axis('off')
+specs=[((0.25,4.55,2.35,1.85),'#F5F8FC','#315F8B','Real pretreatment\nI-SPY2 covariates',['736 patients','3 clinical | 702 pathways | 139 RPPA']),((2.90,4.55,2.35,1.85),'#F5FAF7','#3F7A5D','Patient-disjoint split',['60% train | 20% DEV | 20% TEST','fit-on-train preprocessing']),((5.55,4.55,2.35,1.85),'#FCFAF4','#9A7824','Locked semi-synthetic\nDGP',['known CATE + real multimodal X','5 DGP × 3 network seeds']),((8.20,4.55,2.55,1.85),'#FCF7F5','#A55C42','Cross-fitted causal\ntargets',['5-fold nuisance cross-fitting','DR pseudo-outcome']),((0.25,2.10,2.35,1.75),'#F8F6FB','#735A8F','Estimator families',['X/T/DR/R learners','TARNet | CFRNet | DragonNet','Transformer HTE']),((2.90,2.10,2.35,1.75),'#FCF6F7','#A75A66','Multimodal fusion\nprobes',['CM-OSR | early fusion','attention | MoE | ablations']),((5.55,2.10,2.35,1.75),'#F5FAF7','#3F7A5D','Prespecified stress\ntests',['weak overlap | missingness','null effect | selective retention']),((8.20,2.10,2.55,1.75),'#F5F8FC','#315F8B','Fresh anchored\nconfirmation',['DEV-only design → frozen AOSR','TEST once + mechanism validation'])]
+for (x,y,w,h),fill,edge,title,lines in specs:
+ p=FancyBboxPatch((x,y),w,h,boxstyle='round,pad=0.025,rounding_size=0.08',facecolor=fill,edgecolor=edge,linewidth=1.5); ax.add_patch(p); ax.text(x+w/2,y+h-0.26,title,ha='center',va='top',fontsize=11.5,fontweight='bold',color='#172B4D',linespacing=1.08); div=y+h-(0.66 if '\n' not in title else 0.88); ax.plot([x+0.18,x+w-0.18],[div,div],color=edge,lw=.8); ys=[y+.68,y+.31] if len(lines)==2 else [y+.77,y+.47,y+.20]
+ for yy,t in zip(ys,lines): ax.text(x+w/2,yy,'\n'.join(textwrap.wrap(t,width=31,break_long_words=False)),ha='center',va='center',fontsize=9.2,color='#1F2933')
+kw=dict(arrowstyle='-|>',mutation_scale=13,linewidth=1.25,color='#586574')
+def ar(a,b): ax.add_patch(FancyArrowPatch(a,b,**kw))
+for a,b in [((2.62,5.47),(2.87,5.47)),((5.27,5.47),(5.52,5.47)),((7.92,5.47),(8.17,5.47)),((2.62,2.97),(2.87,2.97)),((5.27,2.97),(5.52,2.97)),((7.92,2.97),(8.17,2.97))]: ar(a,b)
+ax.plot([9.48,9.48],[4.52,4.20],color='#586574',lw=1.2); ax.plot([9.48,.15],[4.20,4.20],color='#586574',lw=1.2); ar((.15,4.20),(.15,3.00)); ax.text(5.5,4.28,'frozen targets → estimator comparison and stress evaluation',ha='center',va='bottom',fontsize=8.7,color='#586574')
+sx,sy,sw,sh=.55,.42,9.90,1.10; p=FancyBboxPatch((sx,sy),sw,sh,boxstyle='round,pad=.025,rounding_size=.08',facecolor='#F4FAFA',edgecolor='#397E83',lw=1.5); ax.add_patch(p); ax.text(sx+sw/2,sy+sh-.23,'Main empirical result',ha='center',va='top',fontsize=12.6,fontweight='bold',color='#173B4D'); ax.plot([sx+.22,sx+sw-.22],[sy+sh-.48,sy+sh-.48],color='#397E83',lw=.8); ax.text(sx+sw/2,sy+.27,'Causal meta-learners were lower-error than unrestricted deep fusion;\nstructured multimodal routing improved deep fusion but not the leading meta-learners.',ha='center',va='center',fontsize=9.5,color='#1F2933'); ax.text(5.5,7.05,'Prespecified multimodal HTE benchmarking workflow',ha='center',va='center',fontsize=17.2,fontweight='bold',color='#172B4D'); fig.tight_layout(); fig.savefig(OUT/'Figure1_workflow_programmatic.png',dpi=600,facecolor='white'); plt.close(fig)
+print(OUT/'Figure1_workflow_programmatic.png')

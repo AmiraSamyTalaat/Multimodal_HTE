@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE",
+  "completed_units": 24,
+  "expected_units": 24,
+  "missing_units": [],
+  "updated_utc": "2026-11-21T04:03:56.670379+00:00",
+  "independence": "12 DGP seed clusters per effect regime; one TEST cohort, split and learner seed",
+  "cross_platform_note": "Exact CATE byte hashes can differ between Windows and Kaggle PCA numerical stacks; compare fixed TEST index hash and zero Root-PEHE within tolerance, never treat this as independent patient replication"
+}

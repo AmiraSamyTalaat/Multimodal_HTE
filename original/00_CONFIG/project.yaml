@@ -1,0 +1,37 @@
+project: B01_CausalTx_Multimodal
+method: CM-OSR
+workspace_windows: .
+  folder\B01
+primary_metric: root_PEHE
+primary_regime: cross_modal_interaction_plus_moderate_weak_overlap
+algorithmic_seeds:
+- 101
+- 211
+- 307
+- 401
+- 503
+network_seeds:
+- 17
+- 29
+- 43
+outer_split:
+- 0.6
+- 0.2
+- 0.2
+nuisance_folds: 5
+effect_folds: 5
+propensity_clip:
+- 0.05
+- 0.95
+router:
+  temperature: 0.75
+  entropy_penalty: 0.001
+  reliability_penalty: 0.05
+  min_support_for_nonabstain: 0.15
+training:
+  max_epochs: 250
+  patience: 30
+  batch_size: 64
+  lr: 0.001
+  weight_decay: 0.0001
+capacity_tolerance_percent: 10

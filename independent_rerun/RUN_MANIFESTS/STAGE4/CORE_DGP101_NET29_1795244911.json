@@ -1,0 +1,17 @@
+{
+  "run_id": "CORE_DGP101_NET29_1795244911",
+  "created_unix": 1795244911.63048,
+  "status": "COMPLETE",
+  "config": {
+    "root": "/kaggle/working/private_work/B01",
+    "data": "/kaggle/working/private_work/B01/02_DATA/processed/ispy2_core_multimodal.npz",
+    "dgp_seed": 101,
+    "net_seed": 29,
+    "epochs": null,
+    "epochs_effective": 250,
+    "device": "cpu"
+  },
+  "python": "3.13.18 (main, Oct 26 2026, 15:28:15) [GCC 13.3.0]",
+  "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+  "finished_unix": 1795245119.0123742
+}

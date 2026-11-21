@@ -1,0 +1,28 @@
+ispy2:
+  expression_accession: GSE194040
+  rppa_accession: GSE196093
+  expression_processed_url: https://ftp.ncbi.nlm.nih.gov/geo/series/GSE194nnn/GSE194040/suppl/GSE194040_ISPY2ResID_AgilentGeneExp_990_FrshFrzn_meanCol_geneLevel_n988.txt.gz
+  role: real_covariate_semi_synthetic
+  expected_rna_samples: 988
+  expected_unique_patients: 987
+  expected_rppa_patients: 736
+cherlob:
+  expression_accession: GSE66305
+  superseries_accession: GSE66399
+  role: randomized_discovery
+trio_b07:
+  baseline_accession: GSE130786
+  prohibited_on_treatment_accession: GSE130787
+  superseries_accession: GSE130788
+  role: locked_external
+rules:
+  pretreatment_only: true
+  public_only: true
+  preserve_raw_downloads: true
+  checksum_sha256: true
+pathways:
+  library_name: WikiPathways_2024_Human
+  library_url: https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=WikiPathways_2024_Human
+  min_mapped_genes: 10
+  max_mapped_genes: 300
+  selection_rule: outcome_blind_fixed_library_gene_coverage_only

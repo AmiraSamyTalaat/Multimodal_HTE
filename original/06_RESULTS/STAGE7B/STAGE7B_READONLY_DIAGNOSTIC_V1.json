@@ -1,0 +1,641 @@
+{
+  "stage": "STAGE7B_READONLY_DIAGNOSTIC_V1",
+  "scientific_rerun": false,
+  "test_accessed": false,
+  "selection_status": "STAGE7B_DEVELOPMENT_NOT_STRONG_ENOUGH_STOP_BEFORE_CONFIRMATORY",
+  "selected_certification": {
+    "TRANSCRIPTOMIC": null,
+    "RPPA": null,
+    "JOINT_MOLECULAR": null
+  },
+  "headline": {
+    "incremental_acceptance_rate": 0.0,
+    "switching_correct_source_rate_among_accepted": 0.0,
+    "negative_control_acceptance_rate": 0.0,
+    "incremental_cucmr_root_pehe": 0.10882936430518657,
+    "incremental_anchor_root_pehe": 0.10882936430518657
+  },
+  "per_regime_methods": {
+    "NO_INCREMENTAL_MOLECULAR_SIGNAL": {
+      "CUCMR": 0.0822756183154448,
+      "DR_LOSS_GLOBAL_STACKING": 0.2155884857783288,
+      "FIXED_CLINICAL_X_ANCHOR": 0.0822756183154448,
+      "FULL_MULTIMODAL_X_LEARNER": 0.1300149580127524,
+      "TRAIN_OOF_GLOBAL_BEST_SINGLE_UPDATE": 0.0822756183154448
+    },
+    "TRANSCRIPTOME_INCREMENTAL": {
+      "CUCMR": 0.10463881982706724,
+      "DR_LOSS_GLOBAL_STACKING": 0.17594239787022511,
+      "FIXED_CLINICAL_X_ANCHOR": 0.10463881982706724,
+      "FULL_MULTIMODAL_X_LEARNER": 0.14205804256905794,
+      "TRAIN_OOF_GLOBAL_BEST_SINGLE_UPDATE": 0.10463881982706724
+    },
+    "RPPA_INCREMENTAL": {
+      "CUCMR": 0.10680875058558247,
+      "DR_LOSS_GLOBAL_STACKING": 0.21440334264155514,
+      "FIXED_CLINICAL_X_ANCHOR": 0.10680875058558247,
+      "FULL_MULTIMODAL_X_LEARNER": 0.14133563532931018,
+      "TRAIN_OOF_GLOBAL_BEST_SINGLE_UPDATE": 0.10680875058558247
+    },
+    "JOINT_MOLECULAR_SYNERGY": {
+      "CUCMR": 0.11617993889949096,
+      "DR_LOSS_GLOBAL_STACKING": 0.25138993401155635,
+      "FIXED_CLINICAL_X_ANCHOR": 0.11617993889949096,
+      "FULL_MULTIMODAL_X_LEARNER": 0.1540564772913401,
+      "TRAIN_OOF_GLOBAL_BEST_SINGLE_UPDATE": 0.11617993889949096
+    },
+    "PATIENT_SUBGROUP_SWITCHING": {
+      "CUCMR": 0.10768994790860538,
+      "DR_LOSS_GLOBAL_STACKING": 0.1541249532451996,
+      "FIXED_CLINICAL_X_ANCHOR": 0.10768994790860538,
+      "FULL_MULTIMODAL_X_LEARNER": 0.1437038403349434,
+      "TRAIN_OOF_GLOBAL_BEST_SINGLE_UPDATE": 0.10768994790860538
+    }
+  },
+  "candidate_diagnostics": {
+    "TRANSCRIPTOMIC": {
+      "by_regime": {
+        "NO_INCREMENTAL_MOLECULAR_SIGNAL": {
+          "mean_D": -3.3181414432300897,
+          "fraction_D_positive": 0.3435374149659864,
+          "spearman_utility_vs_D": 0.24709227266355735,
+          "anchor_pehe": 0.0850065665399368,
+          "candidate_pehe": 1.7358761481089227,
+          "candidate_minus_anchor_pehe": 1.6508695815689858,
+          "upper_tail": {
+            "0.2": {
+              "mean": -2.149067375070046,
+              "lcb95": -2.586372336198849,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.1657257983028826,
+              "lcb95": -1.5149147535006866,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.6888375387359558,
+              "lcb95": -2.094410684950344,
+              "n_dgp": 6
+            }
+          }
+        },
+        "TRANSCRIPTOME_INCREMENTAL": {
+          "mean_D": -3.6918079524100955,
+          "fraction_D_positive": 0.3299319727891156,
+          "spearman_utility_vs_D": 0.17236175908835996,
+          "anchor_pehe": 0.10579312862633115,
+          "candidate_pehe": 1.7393936078809429,
+          "candidate_minus_anchor_pehe": 1.6336004792546117,
+          "upper_tail": {
+            "0.2": {
+              "mean": -4.164966461886297,
+              "lcb95": -5.724187584233736,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -2.487261081617214,
+              "lcb95": -3.70539403145575,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.7850681370926909,
+              "lcb95": -2.420930259539346,
+              "n_dgp": 6
+            }
+          }
+        },
+        "RPPA_INCREMENTAL": {
+          "mean_D": -3.3665365848228723,
+          "fraction_D_positive": 0.35034013605442177,
+          "spearman_utility_vs_D": 0.23542876778411465,
+          "anchor_pehe": 0.10719487216060766,
+          "candidate_pehe": 1.722978549379158,
+          "candidate_minus_anchor_pehe": 1.6157836772185503,
+          "upper_tail": {
+            "0.2": {
+              "mean": -3.1272247353485754,
+              "lcb95": -5.098980947241612,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.74539775254276,
+              "lcb95": -2.5471536972792546,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.525723894651291,
+              "lcb95": -2.043383114806815,
+              "n_dgp": 6
+            }
+          }
+        },
+        "JOINT_MOLECULAR_SYNERGY": {
+          "mean_D": -3.452058087367771,
+          "fraction_D_positive": 0.3463718820861678,
+          "spearman_utility_vs_D": 0.19082315568757158,
+          "anchor_pehe": 0.11758207916880897,
+          "candidate_pehe": 1.7425070335696757,
+          "candidate_minus_anchor_pehe": 1.6249249544008668,
+          "upper_tail": {
+            "0.2": {
+              "mean": -4.0793556390510775,
+              "lcb95": -6.02478438817211,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -2.1955015448210426,
+              "lcb95": -2.982250257882196,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.949028570929774,
+              "lcb95": -2.606707892140157,
+              "n_dgp": 6
+            }
+          }
+        },
+        "PATIENT_SUBGROUP_SWITCHING": {
+          "mean_D": -3.1568118402380807,
+          "fraction_D_positive": 0.3242630385487528,
+          "spearman_utility_vs_D": 0.2185036582613278,
+          "anchor_pehe": 0.10887371376702937,
+          "candidate_pehe": 1.7523470561773264,
+          "candidate_minus_anchor_pehe": 1.6434733424102972,
+          "upper_tail": {
+            "0.2": {
+              "mean": -2.728938712550899,
+              "lcb95": -3.951644789772929,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.7300915364796727,
+              "lcb95": -2.2810669420451792,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.4852137220961386,
+              "lcb95": -1.8567097495669698,
+              "n_dgp": 6
+            }
+          }
+        }
+      },
+      "pooled": {
+        "all_regimes": {
+          "mean_D": -3.3970711816137817,
+          "fraction_D_positive": 0.3388888888888889,
+          "spearman_utility_vs_D": 0.21340446371135618,
+          "upper_tail": {
+            "0.2": {
+              "mean": -3.2166691757732013,
+              "lcb95": -3.87479764223021,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.8218712010462808,
+              "lcb95": -2.1860067973787873,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.6936869372515873,
+              "lcb95": -1.9966403021741392,
+              "n_dgp": 6
+            }
+          }
+        },
+        "matched_regimes": {
+          "mean_D": -3.424309896324088,
+          "fraction_D_positive": 0.32709750566893425,
+          "spearman_utility_vs_D": 0.19524946030493648,
+          "upper_tail": {
+            "0.2": {
+              "mean": -3.487365845716527,
+              "lcb95": -4.094689274048052,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -2.0009735521671357,
+              "lcb95": -2.4122663031689986,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.643343207302803,
+              "lcb95": -1.982376868491237,
+              "n_dgp": 6
+            }
+          }
+        }
+      }
+    },
+    "RPPA": {
+      "by_regime": {
+        "NO_INCREMENTAL_MOLECULAR_SIGNAL": {
+          "mean_D": -3.8731217230584556,
+          "fraction_D_positive": 0.3163265306122449,
+          "spearman_utility_vs_D": 0.286629362802429,
+          "anchor_pehe": 0.0850065665399368,
+          "candidate_pehe": 1.9448878308761612,
+          "candidate_minus_anchor_pehe": 1.8598812643362244,
+          "upper_tail": {
+            "0.2": {
+              "mean": -2.1532322958080576,
+              "lcb95": -5.50439926230131,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.724063236594046,
+              "lcb95": -2.7024271914149445,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.8425411691364273,
+              "lcb95": -2.3848909913455723,
+              "n_dgp": 6
+            }
+          }
+        },
+        "TRANSCRIPTOME_INCREMENTAL": {
+          "mean_D": -3.803480813445464,
+          "fraction_D_positive": 0.3231292517006803,
+          "spearman_utility_vs_D": 0.26547838963147974,
+          "anchor_pehe": 0.10579312862633115,
+          "candidate_pehe": 1.9691398862544993,
+          "candidate_minus_anchor_pehe": 1.8633467576281681,
+          "upper_tail": {
+            "0.2": {
+              "mean": -0.8299152450085869,
+              "lcb95": -1.5708280886655086,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.299786039653086,
+              "lcb95": -1.9377760516647389,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.3003662002472345,
+              "lcb95": -1.7717494772518785,
+              "n_dgp": 6
+            }
+          }
+        },
+        "RPPA_INCREMENTAL": {
+          "mean_D": -3.7614012697931356,
+          "fraction_D_positive": 0.3157596371882086,
+          "spearman_utility_vs_D": 0.2507427989360236,
+          "anchor_pehe": 0.10719487216060766,
+          "candidate_pehe": 1.9196906648063397,
+          "candidate_minus_anchor_pehe": 1.812495792645732,
+          "upper_tail": {
+            "0.2": {
+              "mean": -3.199086489050751,
+              "lcb95": -5.285512052496895,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.7739042975595043,
+              "lcb95": -2.753002860786911,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.904830586076079,
+              "lcb95": -2.6799602814945125,
+              "n_dgp": 6
+            }
+          }
+        },
+        "JOINT_MOLECULAR_SYNERGY": {
+          "mean_D": -4.022303604545036,
+          "fraction_D_positive": 0.3344671201814059,
+          "spearman_utility_vs_D": 0.26054796435108796,
+          "anchor_pehe": 0.11758207916880897,
+          "candidate_pehe": 1.93787048362701,
+          "candidate_minus_anchor_pehe": 1.820288404458201,
+          "upper_tail": {
+            "0.2": {
+              "mean": -4.0215158117317875,
+              "lcb95": -6.403699248499369,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.615927927277456,
+              "lcb95": -2.885824105713992,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.296130731018937,
+              "lcb95": -1.9883506046504458,
+              "n_dgp": 6
+            }
+          }
+        },
+        "PATIENT_SUBGROUP_SWITCHING": {
+          "mean_D": -4.37728289121622,
+          "fraction_D_positive": 0.3344671201814059,
+          "spearman_utility_vs_D": 0.2662818613649011,
+          "anchor_pehe": 0.10887371376702937,
+          "candidate_pehe": 1.9552124580247963,
+          "candidate_minus_anchor_pehe": 1.8463387442577668,
+          "upper_tail": {
+            "0.2": {
+              "mean": -1.4878683060928075,
+              "lcb95": -3.3700655926257617,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.6027599125913639,
+              "lcb95": -2.5672043229777883,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.8220063171931054,
+              "lcb95": -2.965137004080066,
+              "n_dgp": 6
+            }
+          }
+        }
+      },
+      "pooled": {
+        "all_regimes": {
+          "mean_D": -3.967518060411662,
+          "fraction_D_positive": 0.32482993197278914,
+          "spearman_utility_vs_D": 0.26608722787056954,
+          "upper_tail": {
+            "0.2": {
+              "mean": -2.4060780194044464,
+              "lcb95": -3.3736242666963734,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.5454518174022922,
+              "lcb95": -1.9655136607478423,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.6455371952151692,
+              "lcb95": -2.097514099937373,
+              "n_dgp": 6
+            }
+          }
+        },
+        "matched_regimes": {
+          "mean_D": -4.069342080504677,
+          "fraction_D_positive": 0.3251133786848073,
+          "spearman_utility_vs_D": 0.2587920841349832,
+          "upper_tail": {
+            "0.2": {
+              "mean": -2.2583330381086486,
+              "lcb95": -4.001267584782652,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.6552269512625621,
+              "lcb95": -2.50828954168447,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.8527203702052368,
+              "lcb95": -2.778121709028435,
+              "n_dgp": 6
+            }
+          }
+        }
+      }
+    },
+    "JOINT_MOLECULAR": {
+      "by_regime": {
+        "NO_INCREMENTAL_MOLECULAR_SIGNAL": {
+          "mean_D": -3.754797809592209,
+          "fraction_D_positive": 0.3344671201814059,
+          "spearman_utility_vs_D": 0.24209199055171035,
+          "anchor_pehe": 0.0850065665399368,
+          "candidate_pehe": 1.7192564383427436,
+          "candidate_minus_anchor_pehe": 1.6342498718028067,
+          "upper_tail": {
+            "0.2": {
+              "mean": -3.2775092421684455,
+              "lcb95": -5.11407461841998,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.7528953870623045,
+              "lcb95": -2.72762425543287,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.5587485094770603,
+              "lcb95": -2.149709703007282,
+              "n_dgp": 6
+            }
+          }
+        },
+        "TRANSCRIPTOME_INCREMENTAL": {
+          "mean_D": -3.8029406272260533,
+          "fraction_D_positive": 0.32936507936507936,
+          "spearman_utility_vs_D": 0.1921961540004615,
+          "anchor_pehe": 0.10579312862633115,
+          "candidate_pehe": 1.682670006262361,
+          "candidate_minus_anchor_pehe": 1.5768768776360298,
+          "upper_tail": {
+            "0.2": {
+              "mean": -5.188325032455942,
+              "lcb95": -8.070377037420242,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -2.287669847612212,
+              "lcb95": -2.984555962257264,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -2.0510722137470414,
+              "lcb95": -2.687376790348074,
+              "n_dgp": 6
+            }
+          }
+        },
+        "RPPA_INCREMENTAL": {
+          "mean_D": -3.474517342425654,
+          "fraction_D_positive": 0.3412698412698413,
+          "spearman_utility_vs_D": 0.2580538769058147,
+          "anchor_pehe": 0.10719487216060766,
+          "candidate_pehe": 1.6984182514651704,
+          "candidate_minus_anchor_pehe": 1.5912233793045627,
+          "upper_tail": {
+            "0.2": {
+              "mean": -2.7179062205939726,
+              "lcb95": -5.473534944893603,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.2976458495010654,
+              "lcb95": -2.014885661977076,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.1313678805758431,
+              "lcb95": -1.6550027097281816,
+              "n_dgp": 6
+            }
+          }
+        },
+        "JOINT_MOLECULAR_SYNERGY": {
+          "mean_D": -3.250812616912126,
+          "fraction_D_positive": 0.3401360544217687,
+          "spearman_utility_vs_D": 0.14862779081204736,
+          "anchor_pehe": 0.11758207916880897,
+          "candidate_pehe": 1.699980103135653,
+          "candidate_minus_anchor_pehe": 1.582398023966844,
+          "upper_tail": {
+            "0.2": {
+              "mean": -4.522102683042341,
+              "lcb95": -8.742112013739266,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -2.86957682983361,
+              "lcb95": -4.635365963824157,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.8608235718796446,
+              "lcb95": -2.7048610029498477,
+              "n_dgp": 6
+            }
+          }
+        },
+        "PATIENT_SUBGROUP_SWITCHING": {
+          "mean_D": -3.2634748521145767,
+          "fraction_D_positive": 0.34750566893424034,
+          "spearman_utility_vs_D": 0.20299087722132794,
+          "anchor_pehe": 0.10887371376702937,
+          "candidate_pehe": 1.690218477474485,
+          "candidate_minus_anchor_pehe": 1.5813447637074556,
+          "upper_tail": {
+            "0.2": {
+              "mean": -0.2837798487715156,
+              "lcb95": -3.4194485423805365,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.3303746735651918,
+              "lcb95": -2.6258525702225057,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.2438919023213704,
+              "lcb95": -2.044098626582795,
+              "n_dgp": 6
+            }
+          }
+        }
+      },
+      "pooled": {
+        "all_regimes": {
+          "mean_D": -3.5093086496541237,
+          "fraction_D_positive": 0.3385487528344671,
+          "spearman_utility_vs_D": 0.2101649291630321,
+          "upper_tail": {
+            "0.2": {
+              "mean": -3.2122037966794044,
+              "lcb95": -4.344506833231574,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -1.7622412713806803,
+              "lcb95": -2.1986408703083566,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.5659737075660922,
+              "lcb95": -1.9475714563091124,
+              "n_dgp": 6
+            }
+          }
+        },
+        "matched_regimes": {
+          "mean_D": -3.250812616912126,
+          "fraction_D_positive": 0.3401360544217687,
+          "spearman_utility_vs_D": 0.14862779081204736,
+          "upper_tail": {
+            "0.2": {
+              "mean": -4.522102683042341,
+              "lcb95": -8.60854678755017,
+              "n_dgp": 6
+            },
+            "0.4": {
+              "mean": -2.86957682983361,
+              "lcb95": -4.587052974862992,
+              "n_dgp": 6
+            },
+            "0.6": {
+              "mean": -1.8608235718796446,
+              "lcb95": -2.7048610029498477,
+              "n_dgp": 6
+            }
+          }
+        }
+      }
+    }
+  },
+  "oracle_diagnostic": {
+    "NO_INCREMENTAL_MOLECULAR_SIGNAL": {
+      "anchor_pehe": 0.0850065665399368,
+      "oracle_best_of_anchor_plus_candidates_pehe": 0.07966538845169974,
+      "oracle_relative_improvement_pct": 6.2832535245706325,
+      "oracle_candidate_acceptance_rate": 0.0935374149659864,
+      "oracle_correct_source_rate_among_candidate_accepts": 0.0
+    },
+    "TRANSCRIPTOME_INCREMENTAL": {
+      "anchor_pehe": 0.10579312862633115,
+      "oracle_best_of_anchor_plus_candidates_pehe": 0.09787748275731017,
+      "oracle_relative_improvement_pct": 7.482192815168179,
+      "oracle_candidate_acceptance_rate": 0.10430839002267574,
+      "oracle_correct_source_rate_among_candidate_accepts": 0.3858695652173913
+    },
+    "RPPA_INCREMENTAL": {
+      "anchor_pehe": 0.10719487216060766,
+      "oracle_best_of_anchor_plus_candidates_pehe": 0.09907478044811263,
+      "oracle_relative_improvement_pct": 7.575074766943032,
+      "oracle_candidate_acceptance_rate": 0.12131519274376418,
+      "oracle_correct_source_rate_among_candidate_accepts": 0.32242990654205606
+    },
+    "JOINT_MOLECULAR_SYNERGY": {
+      "anchor_pehe": 0.11758207916880897,
+      "oracle_best_of_anchor_plus_candidates_pehe": 0.10799491786482932,
+      "oracle_relative_improvement_pct": 8.153590557125346,
+      "oracle_candidate_acceptance_rate": 0.12868480725623582,
+      "oracle_correct_source_rate_among_candidate_accepts": 0.31718061674008813
+    },
+    "PATIENT_SUBGROUP_SWITCHING": {
+      "anchor_pehe": 0.10887371376702937,
+      "oracle_best_of_anchor_plus_candidates_pehe": 0.09838221619250373,
+      "oracle_relative_improvement_pct": 9.636391752903368,
+      "oracle_candidate_acceptance_rate": 0.12585034013605442,
+      "oracle_correct_source_rate_among_candidate_accepts": 0.2972972972972973
+    }
+  },
+  "gate_logic_note": {
+    "D1_current_code": "inc_c <= inc_a",
+    "observed_equal": true,
+    "interpretation": "D1=True does not demonstrate improvement when CUCMR exactly equals the anchor. Overall Stage7B still failed D4/D5/D6."
+  },
+  "train_oof_candidate_meanD": {
+    "TRANSCRIPTOMIC": {
+      "mean_train_oof_D": -4.479703160127004,
+      "fraction_positive_train_oof_meanD": 0.0,
+      "n": 60
+    },
+    "RPPA": {
+      "mean_train_oof_D": -5.149489313364029,
+      "fraction_positive_train_oof_meanD": 0.0,
+      "n": 60
+    },
+    "JOINT_MOLECULAR": {
+      "mean_train_oof_D": -4.6665009498596195,
+      "fraction_positive_train_oof_meanD": 0.0,
+      "n": 60
+    }
+  }
+}

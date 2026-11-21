@@ -1,0 +1,12 @@
+{
+  "utc": "2026-11-21T18:54:04.894493+00:00",
+  "stage": "stage6a",
+  "backend": "cpu",
+  "training_rerun": false,
+  "kaggle_checkpoint_sha256": "4507f5a276f5759889bd26093b6e1eb3247c01f1e57cd7882591d8c57fba892a",
+  "comparator_sha256": "0340a06a31bab8c7e0f0f72a74a706aaf8c0d4341fdd3de9187a1eae6918eae4",
+  "comparison_report_sha256": "7f21e288de5134477faa5a95672d0acb9c23bd675dc2b6168390be080eb25beb",
+  "rtol": 0.001,
+  "atol": 1e-06,
+  "comparator_exit_code": 2
+}

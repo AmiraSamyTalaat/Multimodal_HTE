@@ -1,0 +1,9 @@
+method,comparator,mean_paired_root_pehe_difference,sd_across_dgp,mcse,n_independent_dgp
+bagged_early_fusion,CM_OSR,2.0019415341154003,0.2847022984248353,0.1273227385256726,5
+bagged_early_fusion,uniform_all_experts_ablation,1.2057908267158262,0.12587159990231958,0.05629149076364849,5
+bagged_early_fusion,early_fusion_DR_capacity_matched,0.03397884319961939,0.16099842720876803,0.0720006855018714,5
+bagged_early_fusion,X_learner,2.680863047916128,0.2644914095307717,0.11828415423510825,5
+single_early_stopped_early_fusion,CM_OSR,2.337204261852827,0.32501965616845846,0.14535320904325638,5
+single_early_stopped_early_fusion,uniform_all_experts_ablation,1.5410535544532529,0.15424850275875285,0.06898202751922704,5
+single_early_stopped_early_fusion,early_fusion_DR_capacity_matched,0.36924157093704624,0.1603175713229047,0.07169619749313716,5
+single_early_stopped_early_fusion,X_learner,3.016125775653555,0.28701500611586767,0.1283570128475196,5

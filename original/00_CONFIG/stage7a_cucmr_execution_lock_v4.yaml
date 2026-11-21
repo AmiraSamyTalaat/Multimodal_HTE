@@ -1,0 +1,154 @@
+stage: STAGE7A_CUCMR_EXECUTION_LOCK_V4
+status: LOCKED_BEFORE_STAGE7_RESULTS
+supersedes_for_execution:
+  - STAGE7A_CUCMR_V2
+  - STAGE7A_CUCMR_EXECUTION_LOCK_V3_DRAFT_NOT_RUN
+amendment_timing: BEFORE_ANY_STAGE7_TRAINING_OR_RESULT
+amendment_reason:
+  - replaces computationally excessive nested learner refitting with a prespecified multi-stage OOF cross-fitting stack
+  - keeps direct OOF construction at nuisance, anchor, candidate-update, and utility-score stages
+  - uses a lightweight fixed clinical X-anchor and fixed HGB residual updates; novelty is the utility-certified selection rule, not backbone size
+  - utility acceptance remains calibrated by within-fit OOF score percentile for transfer across fresh refits
+
+method:
+  name: CUCMR
+  full_name: Causal Utility-Certified Modality Routing
+  anchor_label: FIXED_CLINICAL_X_ANCHOR
+  nuisance_covariates: ALL_PERMITTED_PRETREATMENT_MODALITIES
+
+crossfit:
+  nuisance_folds: 3
+  anchor_folds: 3
+  candidate_folds: 3
+  utility_score_folds: 3
+  design: MULTI_STAGE_OOF
+
+clinical_anchor:
+  family: X_LEARNER_RANDOM_FOREST
+  n_estimators: 100
+  min_samples_leaf: 8
+  n_jobs: -1
+  propensity: STANDARDIZED_LOGISTIC_REGRESSION
+
+candidate_updates:
+  - TRANSCRIPTOMIC
+  - RPPA
+  - JOINT_MOLECULAR
+
+residual_update_learner:
+  family: HistGradientBoostingRegressor
+  learning_rate: 0.05
+  max_iter: 120
+  max_leaf_nodes: 15
+  min_samples_leaf: 15
+  l2_regularization: 1.0
+  early_stopping: false
+  family_search_allowed: false
+
+utility_features:
+  features:
+    - clinical_covariates
+    - anchor_cate
+    - candidate_correction
+    - abs_candidate_correction
+    - oof_propensity
+    - oof_overlap_min_p_1minus_p
+  raw_molecular_vectors_allowed: false
+
+utility_learner:
+  family: HistGradientBoostingRegressor
+  learning_rate: 0.05
+  max_iter: 120
+  max_leaf_nodes: 7
+  min_samples_leaf: 20
+  l2_regularization: 1.0
+  early_stopping: false
+  family_search_allowed: false
+
+utility_score_calibration:
+  type: EMPIRICAL_PERCENTILE_AGAINST_TRAIN_OOF_UTILITY_SCORES
+
+development:
+  dgp_seeds: [2411, 2539, 2671, 2797, 2909, 2963]
+  learner_seeds: [31, 47]
+  dgp_clusters: 6
+  role: TRAIN_FIT_DEV_ONLY_METHOD_DEVELOPMENT
+  threshold_selection_allowed: true
+  regimes:
+    - NO_INCREMENTAL_MOLECULAR_SIGNAL
+    - TRANSCRIPTOME_INCREMENTAL
+    - RPPA_INCREMENTAL
+    - JOINT_MOLECULAR_SYNERGY
+    - PATIENT_SUBGROUP_SWITCHING
+
+confirmatory_reserved:
+  dgp_seeds: [3011, 3163, 3299, 3449, 3581, 3691, 3821, 3943, 4079, 4211]
+  learner_seeds: [61, 79]
+  role: RESERVED_NOT_AUTHORIZED_BY_STAGE7B_PACKAGE
+
+semi_synthetic_data_policy:
+  real_input: PRETREATMENT_X_ONLY
+  training_indices: LOCKED_TRAIN_ONLY
+  development_evaluation_indices: LOCKED_DEV_ONLY
+  stage6b_test_indices: FORBIDDEN_IN_STAGE7B
+  treatment_and_outcome: FRESH_SYNTHETIC_FROM_STAGE7_DGP
+
+dgp:
+  propensity_clip: [0.05, 0.95]
+  modality_projection:
+    preprocessing: EXISTING_TRAIN_ONLY_MODALITY_PREPROCESSOR
+    pca_components: 5
+    seeded_projection: NORMALIZED_RANDOM_WEIGHTS_OVER_TRAIN_FIT_PCS
+    residualize_against_clinical: true
+    residualizer: Ridge_alpha_1
+    standardize_residual_on_train: true
+  joint_signal:
+    base: PRODUCT_OF_RESIDUALIZED_TRANSCRIPTOMIC_AND_RPPA_SCORES
+    residualize_against: [clinical, transcriptomic_score, rppa_score]
+    standardize_on_train: true
+  incremental_sd_ratio_to_clinical_effect_component: 0.60
+  switching_subgroup:
+    definition: TRAIN_MEDIAN_SPLIT_OF_CLINICAL_EFFECT_SCORE
+    upper_group_increment: TRANSCRIPTOMIC
+    lower_group_increment: RPPA
+
+development_certification:
+  candidate_acceptance_coverages: [0.60, 0.40, 0.20]
+  score_percentile_thresholds: [0.40, 0.60, 0.80]
+  selection_rule: LARGEST_COVERAGE_WITH_ONE_SIDED_95PCT_DGP_CLUSTER_BOOTSTRAP_LCB_GT_0
+  bootstrap_B: 5000
+  bootstrap_seed: 20261010
+  if_none: DISABLE_CANDIDATE
+  compare_accepted_candidates_by: RAW_PREDICTED_UTILITY
+
+comparators:
+  - FIXED_CLINICAL_X_ANCHOR
+  - FULL_MULTIMODAL_X_LEARNER_EXISTING_300_TREE
+  - DR_LOSS_GLOBAL_STACKING
+  - TRAIN_OOF_GLOBAL_BEST_SINGLE_UPDATE
+  - EACH_SINGLE_MODALITY_UPDATE
+historical_predecessor_not_rerun:
+  - AOSR_X_gamma2
+
+development_freeze_rule:
+  D1_incremental_vs_anchor: pooled incremental-regime mean root-PEHE of CUCMR <= fixed clinical anchor
+  D2_switching_vs_fullX: switching-regime mean root-PEHE of CUCMR <= full multimodal X-learner
+  D3_negative_control: no-incremental acceptance_rate <= 0.15 and root-PEHE <= 1.05 * anchor
+  D4_switching_localization: among accepted switching updates correct_source_rate >= 0.55
+  D5_nontrivial_use: pooled incremental-regime acceptance_rate >= 0.15
+  D6_at_least_one_certified_candidate: true
+  pass_status: FROZEN_FOR_STAGE7C_CONFIRMATORY
+  fail_status: STAGE7B_DEVELOPMENT_NOT_STRONG_ENOUGH_STOP_BEFORE_CONFIRMATORY
+
+forbidden:
+  - stage6b_test_access_in_stage7b
+  - confirmatory_seed_access_in_stage7b
+  - CHER_LOB_access_in_stage7b
+  - TRIO_access_in_stage7b
+  - seed_cherry_picking
+  - dropping_failed_regimes
+  - changing_candidate_families_after_development_results_without_new_lock
+  - calling_development_results_confirmatory
+  - first_multimodal_HTE_claim
+  - first_causal_MoE_claim
+  - individual_patient_confidence_guarantee

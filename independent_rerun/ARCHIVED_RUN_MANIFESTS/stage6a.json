@@ -1,0 +1,14 @@
+{
+  "run_id": "DEV6A_DGP1061_NET19_1790140829",
+  "stage": "STAGE6A_Q1_METHOD_DEVELOPMENT",
+  "dgp_seed": 1061,
+  "net_seed": 19,
+  "split_used_for_candidate_evaluation": "DEV_ONLY",
+  "test_accessed": false,
+  "primary_grid_rerun": false,
+  "stage5a_rerun": false,
+  "device": "cuda",
+  "started": 1790140830.1059723,
+  "status": "COMPLETE",
+  "finished": 1790142368.2061462
+}

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "scientific_training_started": false,
+  "local_torch_required_for_preflight": false,
+  "counting_method": "analytic parameter count mirroring the locked PyTorch module definitions; no model is instantiated or trained locally",
+  "n_patients": 736,
+  "dims": {
+    "clinical": 3,
+    "transcriptomic": 702,
+    "rppa": 139
+  },
+  "CM_OSR_neural_trainable_params": 126440,
+  "CM_OSR_components": {
+    "four_effect_experts_params": 125700,
+    "support_router_params": 740
+  },
+  "capacity_tolerance": 0.1,
+  "matches": {
+    "early_fusion": {
+      "hidden": 128,
+      "params": 124801,
+      "rel_error": 0.012962670041126226
+    },
+    "generic_attention": {
+      "d_model": 128,
+      "params": 125186,
+      "rel_error": 0.009917747548244227
+    },
+    "generic_MoE": {
+      "hidden": 76,
+      "params": 129054,
+      "rel_error": 0.02067383739322999
+    }
+  },
+  "training_budget": {
+    "max_epochs": 250,
+    "patience_CM_OSR_experts": 30,
+    "same_max_epochs_neural_baselines": true
+  },
+  "note": "This is a non-training preflight. Capacity matching is computed analytically from the exact locked layer definitions. PyTorch is required only in the Kaggle scientific runtime, not on this Windows machine for this gate. Non-neural density/reliability estimators in CM-OSR are reported separately rather than hidden."
+}

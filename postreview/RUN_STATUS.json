@@ -1,0 +1,135 @@
+{
+  "status": "COMPLETE_WITH_DECLARED_GAPS",
+  "updated_utc": "2026-11-20T20:57:21.329767+00:00",
+  "stages": {
+    "baselines": {
+      "stage": "BASELINE_POSTREVIEW",
+      "status": "COMPLETE",
+      "started_utc": "2026-11-20T15:35:36.086623+00:00",
+      "finished_utc": "2026-11-20T15:37:27.656296+00:00",
+      "dgp_seeds": [
+        101,
+        211,
+        307,
+        401,
+        503
+      ],
+      "network_seeds": [
+        17,
+        29,
+        43
+      ],
+      "n_dgp_independent": 5,
+      "n_original_runs": 15,
+      "n_test_per_run": 148,
+      "source_data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+      "code_sha256": "bb2867758b018dce1551d6e7ad22d7164b601eb92e16aa0ad955da2b0178e0e7",
+      "errors": [],
+      "note": "Post-review analysis; oracle test-CATE constant is nondeployable; no original result was modified."
+    },
+    "oracle_fairness": {
+      "stage": "ORACLE_FAIRNESS_POSTREVIEW",
+      "started_utc": "2026-11-20T15:41:31.423334+00:00",
+      "code_sha256": "6633d9bd1ee948a7a04d1b524cea27222f81fad26cd7360988dbe2c52581657b",
+      "data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+      "requested_pairs": 15,
+      "completed_pairs": [
+        "DGP101_NET17",
+        "DGP101_NET29",
+        "DGP101_NET43",
+        "DGP211_NET17",
+        "DGP211_NET29",
+        "DGP211_NET43",
+        "DGP307_NET17",
+        "DGP307_NET29",
+        "DGP307_NET43",
+        "DGP401_NET17",
+        "DGP401_NET29",
+        "DGP401_NET43",
+        "DGP503_NET17",
+        "DGP503_NET29",
+        "DGP503_NET43"
+      ],
+      "failed_pairs": [],
+      "status": "COMPLETE",
+      "finished_utc": "2026-11-20T15:54:38.817235+00:00"
+    },
+    "fairness": {
+      "stage": "FAIR_BAGGED_EARLY_FUSION_POSTREVIEW",
+      "status": "COMPLETE",
+      "completed_batches": 5,
+      "expected_batches": 5,
+      "completed_run_pairs": 15,
+      "expected_run_pairs": 15,
+      "independence": "DGP seeds are clusters; 3 network seeds per DGP are not independent",
+      "last_updated_utc": "2026-11-20T16:07:30.349623+00:00"
+    },
+    "additional": {
+      "stage": "ADDITIONAL_DIAGNOSTICS_POSTREVIEW",
+      "status": "COMPLETE",
+      "finished_utc": "2026-11-20T15:48:14.284975+00:00",
+      "code_sha256": "97b9f7579e1cdf4eec541f91df5b7c37f8099d30b50e82d9f84698cb4c04708c",
+      "data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+      "original_stage5a_mask_comparison_errors": [],
+      "scope": "Read-only DGP reconstruction and Stage7B DEV prediction audit; no model training"
+    },
+    "imputation": {
+      "stage": "IMPUTATION_DIAGNOSTICS_POSTREVIEW",
+      "status": "COMPLETE",
+      "finished_utc": "2026-11-20T15:59:35.385730+00:00",
+      "code_sha256": "5a86f1ff5caee69deb1423def00b674351d8822437e77600104871496e08de38",
+      "data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+      "methods": [
+        "zero after TRAIN-only standardization",
+        "10-nearest clinical donors from TRAIN only"
+      ],
+      "scope": "Feature reconstruction diagnostic on originally generated DEV/TEST masks; no treatment-effect model retraining yet"
+    },
+    "missingness": {
+      "status": "COMPLETE",
+      "completed_seeds": 5,
+      "failed": [],
+      "finished_utc": "2026-11-20T16:12:12.407586+00:00",
+      "data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a"
+    },
+    "classical_sensitivity": {
+      "status": "COMPLETE",
+      "completed_seeds": [
+        101,
+        211,
+        307,
+        401,
+        503
+      ],
+      "errors": [],
+      "finished_utc": "2026-11-20T16:26:11.475851+00:00",
+      "data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a"
+    },
+    "ridge_extension": {
+      "status": "COMPLETE",
+      "completed_pairs": 15,
+      "errors": [],
+      "finished_utc": "2026-11-20T16:59:25.925621+00:00",
+      "data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a"
+    },
+    "replication": {
+      "stage": "REPLICATION_POSTREVIEW",
+      "status": "COMPLETE",
+      "expected_units": 270,
+      "completed_units": 270,
+      "independence": "30 DGP seeds; 3 reused patient-level split seeds; 3 effect regimes. DGP-cluster MCSE averages split means within each seed.",
+      "last_updated_utc": "2026-11-20T17:56:27.231840+00:00"
+    },
+    "clean_overlap": {
+      "status": "COMPLETE",
+      "finished_utc": "2026-11-20T16:40:35.320374+00:00",
+      "code_sha256": "6c59abc12d49aebd19256e9b86747eae67e4499f7665e4f77a1354f49540dc36",
+      "data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+      "scope": "Pure propensity-scale contrast with shared CATE/mu; diagnostics only",
+      "n_dgp": 5,
+      "common_random_numbers": "treatment draws use shared uniforms per DGP"
+    }
+  },
+  "scientific_scope": "Post-review; original prespecified outputs untouched",
+  "independence": "DGP clusters, not network seeds; replication MCSE conditional on fixed patient cohort"
+}

@@ -1,0 +1,11 @@
+{
+  "stage": "STAGE5A",
+  "grid_complete": true,
+  "observed_pairs": 15,
+  "required_pairs": 15,
+  "primary_grid_changed": false,
+  "status": "EVIDENCE_READY_FOR_RESULTS_AUDITOR",
+  "automatic_H2_pass_not_assigned": true,
+  "reason": "H2 is a prespecified secondary robustness hypothesis without a single locked scalar pass threshold; report paired cluster intervals and selective/coverage evidence without promoting a new primary endpoint.",
+  "next": "RESULTS_AUDITOR_STATISTICIAN_STAGE5A_THEN_STAGE5B_OR_REAL_TRIAL"
+}

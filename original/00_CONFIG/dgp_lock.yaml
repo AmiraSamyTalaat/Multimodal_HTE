@@ -1,0 +1,40 @@
+version: 1.0
+locked_before_any_heldout_results: true
+primary_regime: cross_modal_interaction_plus_moderate_weak_overlap
+projection_seeds:
+  clinical: 1101
+  transcriptomic: 2203
+  rppa: 3307
+  secondary_transcriptomic: 4409
+  secondary_rppa: 5519
+base_outcome:
+  intercept: -0.25
+  clinical: 0.45
+  transcriptomic: 0.30
+  rppa: -0.20
+  cross_modal: 0.25
+treatment_propensity:
+  intercept: 0.0
+  clinical: 0.25
+  transcriptomic: 0.45
+  rppa: 0.45
+  cross_modal: 0.65
+  moderate_overlap_scale: 1.35
+  severe_overlap_scale: 2.25
+cate_primary:
+  intercept: 0.10
+  transcriptomic_x_rppa: 0.16
+  clinical_x_transcriptomic: 0.08
+  rppa: -0.05
+  min: -0.35
+  max: 0.45
+outcome_probability_clip: [0.02, 0.98]
+missingness:
+  mcar_rates: [0.10, 0.25, 0.40]
+  mar_base_rate: 0.10
+  mar_clinical_slope: 0.25
+negative_control:
+  tau: 0.0
+notes:
+  - DGP parameters are locked before any model result inspection.
+  - Test data may never be used to alter these coefficients or select a regime.

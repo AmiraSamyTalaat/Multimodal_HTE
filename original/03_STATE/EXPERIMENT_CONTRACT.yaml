@@ -1,0 +1,210 @@
+project: B01_CausalTx_Multimodal
+method: CM-OSR
+method_long_name: Cross-Modal Orthogonal Support Routing
+contract_version: 1.0
+locked_date: 2026-09-18
+status: LOCKED_PRE_IMPLEMENTATION
+research_question: Does routing modality-specific treatment-effect evidence after
+  full-information orthogonal nuisance correction improve heterogeneous treatment-effect
+  estimation under modality-local effect modification and weak support, while providing
+  calibrated support-aware abstention, relative to fair early-fusion and causal representation
+  baselines?
+scientific_hypotheses:
+  H1: Orthogonal-score-level modality routing will reduce held-out CATE error versus
+    capacity-matched early fusion when treatment effect modifiers are distributed
+    unevenly across modalities.
+  H2: Support/reliability-constrained routing will degrade more gracefully than generic
+    attention/MoE under weak overlap, missing modality, and cross-study shift.
+  H3: The learned benefit ranking will retain evidence of treatment-effect heterogeneity
+    in an external randomized trial without external tuning.
+primary_algorithmic_benchmark:
+  source: I-SPY2-990 real pretreatment covariates
+  accessions:
+  - GSE194040
+  - GSE196093
+  design: semi_synthetic_outcomes_and_treatment_on_real_multimodal_covariates
+  complete_case_target_n: approximately_736_before_QC
+  modalities:
+  - clinical
+  - transcriptomic_pathways
+  - RPPA
+  true_cate_known: true
+primary_real_trial:
+  name: CHER-LOB
+  design: randomized_phase_II
+  baseline_only: true
+  outcome: pCR
+  primary_contrast: dual_trastuzumab_lapatinib_vs_trastuzumab
+  secondary_contrast: lapatinib_vs_trastuzumab
+  modalities_core:
+  - clinical_common
+  - transcriptomic_pathways
+  modality_optional: copy_number
+  superseries_accession: GSE66399
+  expression_accession: GSE66305
+  copy_number_accession_optional: GSE66398
+external_trial:
+  name: TRIO-US_B07
+  design: randomized_multicenter_phase_II
+  baseline_only: true
+  prohibited_predictor_source: GSE130787_on_treatment_run_in
+  outcome: pCR
+  primary_contrast: dual_trastuzumab_lapatinib_vs_trastuzumab
+  no_external_tuning: true
+  modalities:
+  - clinical_common
+  - transcriptomic_pathways
+  superseries_accession: GSE130788
+  baseline_expression_accession: GSE130786
+primary_estimand:
+  scale: risk_difference
+  definition: E[Y_dual - Y_trastuzumab | X]
+  population: trial_eligible_HER2_positive_patients_represented_by_each_cohort
+primary_endpoint:
+  name: root_PEHE
+  dataset: I-SPY2_based_locked_DGP_primary_regime
+  direction: lower_is_better
+  comparison: CM-OSR_vs_capacity_matched_early_fusion_DR
+  decision_rule: PASS technical primary gate only if CM-OSR has lower mean root-PEHE
+    across prespecified seeds and the paired bootstrap 95% CI for the per-replicate
+    difference is entirely below zero.
+hierarchical_secondary_endpoints:
+- policy_regret_on_semi_synthetic_test
+- CATE_calibration_error_on_semi_synthetic_test
+- interval_coverage_at_nominal_90_percent_on_known_tau
+- selective_root_PEHE_vs_retained_fraction
+- weak_overlap_stratified_root_PEHE
+- missing_modality_stress_root_PEHE
+- external_trial_continuous_treatment_by_benefit_score_interaction
+- external_trial_randomization_weighted_policy_value
+- external_selective_policy_value_vs_retained_fraction
+split_policy:
+  semi_synthetic:
+    unit: patient
+    outer_split: patient_disjoint_train_dev_test
+    proportions:
+    - 0.6
+    - 0.2
+    - 0.2
+    split_once_before_modeling: true
+    dgp_parameter_selection_uses_test: false
+  CHER_LOB:
+    unit: patient
+    development: nested_cross_fitting_only_due_small_n
+    no_random_patient_holdout_claim: true
+    score_model_frozen_before_TRIO: true
+  TRIO_US_B07:
+    role: locked_external_test
+    tuning_allowed: false
+    refitting_allowed: false
+cross_fitting:
+  nuisance_K: 5
+  effect_expert_K: 5
+  patient_disjoint: true
+  OOF_predictions_required_for_router_reliability: true
+DGP_regimes_prespecified:
+- shared_effect_modifier
+- transcriptome_local_effect_modifier
+- RPPA_local_effect_modifier
+- cross_modal_interaction_effect_modifier
+- moderate_weak_overlap
+- severe_weak_overlap_stress_only
+- missing_modality_MCAR
+- missing_modality_MAR_by_clinical_covariates
+- null_treatment_effect_negative_control
+DGP_primary_regime:
+  name: cross_modal_interaction_plus_moderate_weak_overlap
+  fixed_before_training: true
+seeds:
+  algorithmic_benchmark:
+  - 101
+  - 211
+  - 307
+  - 401
+  - 503
+  network_initialization_per_DGP_seed:
+  - 17
+  - 29
+  - 43
+  rule: all_methods_use_same_seed_grid
+baselines:
+- T_learner_regularized
+- X_learner
+- DR_learner
+- R_learner
+- TARNet
+- CFRNet
+- DragonNet
+- TransTEE_or_nearest_reproducible_transformer_HTE
+- early_fusion_DR_capacity_matched
+- generic_multimodal_attention_DR_capacity_matched
+- generic_MoE_DR_capacity_matched
+- joint_only_CM_OSR_ablation
+- modality_only_uniform_fusion_ablation
+capacity_fairness:
+  required: true
+  parameters_tolerance_percent: 10
+  training_budget_matched: true
+  same_input_information_for_primary_baselines: true
+preprocessing_lock:
+  baseline_features_only: true
+  pathway_mapping: fixed_public_gene_sets
+  supervised_feature_selection: training_fold_only
+  external_study_normalization: outcome_blind_within_study
+  no_joint_ComBat_using_external_outcomes: true
+  no_post_treatment_features: true
+uncertainty:
+  semi_synthetic: conformal_or_bootstrap_calibrated_CATE_band_on_known_tau
+  real_trials: CATE_score_stability_plus_selective_abstention
+  forbidden_claim: literal_observed_patient_ITE_CI
+support_router:
+  signals_allowed_at_inference:
+  - treatment_overlap_score_from_baseline_covariates_or_known_trial_randomization
+  - modality_availability
+  - modality_representation_support_density
+  - OOF_expert_reliability_model
+  - expert_disagreement
+  forbidden_signals:
+  - outcome
+  - pCR
+  - post_treatment_measurement
+  - test_fold_performance
+  - external_trial_labels_for_threshold_tuning
+ablation_plan_file: ABLATION_PLAN.md
+statistics:
+  primary: paired_cluster_or_replicate_bootstrap_95CI
+  alpha: 0.05
+  report_effect_size: true
+  multiplicity:
+    primary_single_confirmatory_test: true
+    secondary_family: Holm_where_hypothesis_testing_is_used
+  external_trial:
+    interaction_test: continuous_score_x_treatment
+    uncertainty: bootstrap_95CI
+    policy_value: randomization_weighted_with_bootstrap_95CI
+negative_controls:
+- zero_effect_DGP
+- treatment_label_permutation_within_prespecified_trial_strata_if_used_as_pipeline_sanity_check
+- random_router_weights_ablation
+late_generalization_gate:
+  planned_now: true
+  execute_only_after_core_results: true
+  tests:
+  - frozen_CHER_LOB_to_TRIO_US_B07_cross_trial_transfer
+  - missing_optional_modality_transfer
+  - platform_shift_pathway_mapping_stress
+  pass_rule: Do not require numerical superiority on every secondary metric. For the
+    main external claim, require a favorable prespecified continuous benefit-score
+    by treatment interaction or improved randomization-weighted policy value with
+    a 95% CI that does not include the null, plus no catastrophic selective-risk failure
+    in the locked support-eligible cohort.
+  failure_handling: narrow_claim_to_algorithmic_and_within_trial_if_external_transfer_unresolved
+forbidden_after_lock:
+- changing_primary_DGP_after_viewing_test
+- changing_primary_endpoint
+- changing_external_cohort
+- selecting_favorable_subgroup_after_external_results
+- seed_search_for_significance
+- threshold_tuning_on_test_or_external
+- using_post_treatment_features
+- calling_real_data_score_an_observed_individual_treatment_effect

@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "completed_units": 72,
+  "expected_units": 72,
+  "updated_utc": "2026-11-21T04:03:41.440162+00:00",
+  "independence": "DGP seed cluster n=12; three resplits share fixed TEST and DGP truth"
+}

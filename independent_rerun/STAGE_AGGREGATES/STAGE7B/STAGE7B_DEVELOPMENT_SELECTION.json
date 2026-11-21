@@ -1,0 +1,35 @@
+{
+  "stage": "STAGE7B_CUCMR_DEVELOPMENT",
+  "grid_complete": true,
+  "observed_pairs": 12,
+  "required_pairs": 12,
+  "fit_split": "TRAIN_ONLY",
+  "evaluation_split": "DEV_ONLY",
+  "test_accessed": false,
+  "selected_certification": {
+    "TRANSCRIPTOMIC": null,
+    "RPPA": null,
+    "JOINT_MOLECULAR": null
+  },
+  "metrics": {
+    "incremental_cucmr_root_pehe": 0.10882936457550059,
+    "incremental_anchor_root_pehe": 0.10882936457550059,
+    "switching_cucmr_root_pehe": 0.10768994815559264,
+    "switching_fullX_root_pehe": 0.1436924132976763,
+    "negative_control_acceptance_rate": 0.0,
+    "negative_control_cucmr_root_pehe": 0.08227561845201486,
+    "negative_control_anchor_root_pehe": 0.08227561845201486,
+    "switching_correct_source_rate_among_accepted": 0.0,
+    "incremental_acceptance_rate": 0.0
+  },
+  "gates": {
+    "D1_incremental_vs_anchor": true,
+    "D2_switching_vs_fullX": true,
+    "D3_negative_control": true,
+    "D4_switching_localization": false,
+    "D5_nontrivial_use": false,
+    "D6_at_least_one_certified_candidate": false
+  },
+  "status": "STAGE7B_DEVELOPMENT_NOT_STRONG_ENOUGH_STOP_BEFORE_CONFIRMATORY",
+  "next": "STOP_BEFORE_CONFIRMATORY_OR_BEGIN_A_NEW_PRELOCKED_DEVELOPMENT_CYCLE"
+}

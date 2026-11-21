@@ -1,0 +1,8 @@
+{
+  "stage": "REPLICATION_POSTREVIEW",
+  "status": "COMPLETE",
+  "expected_units": 270,
+  "completed_units": 270,
+  "independence": "30 DGP seeds; 3 reused patient-level split seeds; 3 effect regimes. DGP-cluster MCSE averages split means within each seed.",
+  "last_updated_utc": "2026-11-20T17:56:27.231840+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "prinprin/b01-p1-postreview-ridge-extension",
+  "title": "b01 p1 postreview ridge extension",
+  "code_file": "b01_p1_ridge_extension.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": false,
+  "dataset_sources": ["prinprin/b01-causaltx-mm-core-runtime"],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

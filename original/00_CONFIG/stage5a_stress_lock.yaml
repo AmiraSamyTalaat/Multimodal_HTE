@@ -1,0 +1,91 @@
+stage: STAGE5A_PRESPECIFIED_SECONDARY_STRESS
+locked_date: '2026-09-20'
+status: LOCKED_BEFORE_STAGE5A_RESULTS
+source_contract: 03_STATE/EXPERIMENT_CONTRACT.yaml
+primary_grid_frozen: true
+primary_grid_rerun_forbidden: true
+algorithmic_seeds:
+- 101
+- 211
+- 307
+- 401
+- 503
+network_seeds:
+- 17
+- 29
+- 43
+training:
+  max_epochs: 250
+  patience: 30
+stress_families:
+  severe_weak_overlap:
+    dgp_regime: severe_weak_overlap_stress_only
+    purpose: H2 weak-overlap stress
+  missing_modality:
+    dgp_regime: cross_modal_interaction_plus_moderate_weak_overlap
+    clinical_always_available: true
+    molecular_modalities:
+    - transcriptomic
+    - rppa
+    mcar_rates:
+    - 0.1
+    - 0.25
+    - 0.4
+    mar_base_rate: 0.1
+    mar_clinical_slope: 0.25
+    mar_formula: p_miss = clip(base_rate + clinical_slope * sigmoid(locked_clinical_projection),
+      0, 0.95)
+    zero_imputation_after_train_standardization: true
+    joint_expert_available_only_if_all_core_modalities_available: true
+    same_stress_mask_across_methods_and_network_seeds_within_DGP: true
+  null_effect_negative_control:
+    dgp_regime: null_treatment_effect_negative_control
+methods:
+- CM_OSR
+- early_fusion_DR_capacity_matched
+- generic_multimodal_attention_DR_capacity_matched
+- generic_MoE_DR_capacity_matched
+- T_learner_regularized
+- X_learner
+- DR_learner
+- R_learner
+missingness_fairness_controls:
+- generic_attention_same_model_availability_masked_inference
+- generic_MoE_same_model_availability_masked_inference
+selective_analysis:
+  retained_fractions:
+  - 1.0
+  - 0.9
+  - 0.8
+  - 0.7
+  - 0.6
+  - 0.5
+  locked_support_threshold: 0.15
+overlap_strata:
+  score: true_overlap_4e1me_for_semisynthetic_evaluation_only
+  cutpoints: training_set_tertiles_applied_to_test
+  labels:
+  - low
+  - mid
+  - high
+uncertainty:
+  semi_synthetic_only: true
+  nominal_coverage: 0.9
+  calibration_split: locked_DEV
+  calibration_target: known_true_tau_available_by_DGP
+  interval: symmetric_split_conformal_absolute_CATE_error
+  test_not_used_for_interval_width: true
+  forbidden_real_trial_claim: literal_observed_patient_ITE_CI
+secondary_statistics:
+  paired_unit: same_DGP_seed_and_network_seed
+  cluster: DGP_seed
+  bootstrap_B: 10000
+  status: exploratory_secondary_not_new_confirmatory_primary
+forbidden_after_stage5a_lock:
+- change_primary_grid
+- seed_search
+- select_stress_rate_after_results
+- retune_on_test
+- change_DGP_coefficients
+- remove_unfavorable_baseline
+- claim_overall_SOTA

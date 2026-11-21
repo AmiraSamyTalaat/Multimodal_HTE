@@ -1,0 +1,27 @@
+{
+  "stage": "STAGE6B_CONFIRMATORY",
+  "grid_complete": true,
+  "observed_pairs": 15,
+  "required_pairs": 15,
+  "selected_candidate": "AOSR_X_gamma2",
+  "evaluation_split": "TEST_ONCE",
+  "candidate_retuned": false,
+  "null_guard_threshold": 0.19288458824157706,
+  "candidate_null_mean_abs_tau": 0.10281827002763744,
+  "candidate_non_null_mean_root_pehe": 0.1746216647326946,
+  "x_learner_non_null_mean_root_pehe": 0.16926845485965408,
+  "mean_abs_routed_correction_non_null": 0.021622449935724295,
+  "gates": {
+    "gate1_null_guard": true,
+    "gate2_within_10pct_X": true,
+    "gate3_better_than_CM_OSR_ci": true,
+    "gate4_better_than_early_fusion_ci": true,
+    "gate4_better_than_generic_attention_ci": true,
+    "gate4_better_than_generic_MoE_ci": true,
+    "gate5_support_selectivity_ci": false,
+    "gate6_nonzero_routed_correction": true,
+    "all_confirmatory_gates_pass": false
+  },
+  "status": "CONFIRMATORY_MIXED_OR_FAIL",
+  "next": "STOP_STRONG_METHOD_CLAIM_AND_REVIEW_FAILED_GATES_BEFORE_REAL_TRIAL"
+}

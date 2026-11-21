@@ -1,0 +1,46 @@
+dgp_seed,split_seed,effect_regime,method,root_pehe,policy_regret,clipped_root_pehe,fraction_outside_minus1_plus1,n_test,source,selected_alpha,dev_selection_criterion,selected_dev_r_loss
+101,20260918,ORIGINAL_PRIMARY,clinical_R_full_fitted_Rloss_selected,0.1753076165914535,0.0174561589956283,0.1753076165914535,0.0,148,new TRAIN-fitted clinical effect with full_fitted nuisance,1000,observed_R_loss,0.2988098801770804
+101,20260918,ORIGINAL_PRIMARY,clinical_R_full_fitted_trueDEV_selected_DIAGNOSTIC,0.1744122803211212,0.0174561589956283,0.1744122803211212,0.0,148,nondeployable true-DEV-CATE selection diagnostic,10000,true_DEV_CATE_non_deployable,0.2990519344120008
+101,20260918,ORIGINAL_PRIMARY,clinical_R_clinical_fitted_Rloss_selected,0.1457877526450917,0.0174561589956283,0.1457877526450917,0.0,148,new TRAIN-fitted clinical effect with clinical_fitted nuisance,constant_limit,observed_R_loss,0.2226036975517964
+101,20260918,ORIGINAL_PRIMARY,clinical_R_oracle_true_simulation_Rloss_selected,0.1366133825385215,0.0174561589956283,0.1366133825385215,0.0,148,new TRAIN-fitted clinical effect with oracle_true_simulation nuisance,constant_limit,observed_R_loss,0.2056929842619642
+101,20260918,ORIGINAL_PRIMARY,archived_clinical_X,0.1947402463061992,0.0250706146007114,0.1947402463061992,0.0,148,archived TEST predictions; no refit,,none_archived,
+101,20260918,ORIGINAL_PRIMARY,archived_clinical_T,0.1935406465153507,0.0250706146007114,0.1935406465153507,0.0,148,archived TEST predictions; no refit,,none_archived,
+101,20260918,ORIGINAL_PRIMARY,archived_full_X,0.1791053264444899,0.0240975834745473,0.1791053264444899,0.0,148,archived TEST predictions; no refit,,none_archived,
+101,20260918,ORIGINAL_PRIMARY,archived_full_T,0.1924056992991334,0.0227466178027522,0.1924056992991334,0.0,148,archived TEST predictions; no refit,,none_archived,
+101,20260918,ORIGINAL_PRIMARY,archived_zero_effect,0.1623281194765304,0.1124514761833927,0.1623281194765304,0.0,148,archived TEST predictions; no refit,,none_archived,
+211,20260918,ORIGINAL_PRIMARY,clinical_R_full_fitted_Rloss_selected,0.1698562655882537,0.0174561589956283,0.1698562655882537,0.0,148,new TRAIN-fitted clinical effect with full_fitted nuisance,constant_limit,observed_R_loss,0.2564371618996243
+211,20260918,ORIGINAL_PRIMARY,clinical_R_full_fitted_trueDEV_selected_DIAGNOSTIC,0.1698562655882537,0.0174561589956283,0.1698562655882537,0.0,148,nondeployable true-DEV-CATE selection diagnostic,constant_limit,true_DEV_CATE_non_deployable,0.2564371618996243
+211,20260918,ORIGINAL_PRIMARY,clinical_R_clinical_fitted_Rloss_selected,0.1627684831619262,0.0174561589956283,0.1627684831619262,0.0,148,new TRAIN-fitted clinical effect with clinical_fitted nuisance,1,observed_R_loss,0.2276120052726092
+211,20260918,ORIGINAL_PRIMARY,clinical_R_oracle_true_simulation_Rloss_selected,0.1432477426673503,0.0174561589956283,0.1432477426673503,0.0,148,new TRAIN-fitted clinical effect with oracle_true_simulation nuisance,constant_limit,observed_R_loss,0.2144057459593732
+211,20260918,ORIGINAL_PRIMARY,archived_clinical_X,0.1684327714503366,0.0174561590624885,0.1684327714503366,0.0,148,archived TEST predictions; no refit,,none_archived,
+211,20260918,ORIGINAL_PRIMARY,archived_clinical_T,0.1665797241192806,0.0174561590624885,0.1665797241192806,0.0,148,archived TEST predictions; no refit,,none_archived,
+211,20260918,ORIGINAL_PRIMARY,archived_full_X,0.193821416891562,0.0287876921191471,0.193821416891562,0.0,148,archived TEST predictions; no refit,,none_archived,
+211,20260918,ORIGINAL_PRIMARY,archived_full_T,0.2145669418348532,0.0298390080310668,0.2145669418348532,0.0,148,archived TEST predictions; no refit,,none_archived,
+211,20260918,ORIGINAL_PRIMARY,archived_zero_effect,0.1623281194765304,0.1124514761833927,0.1623281194765304,0.0,148,archived TEST predictions; no refit,,none_archived,
+307,20260918,ORIGINAL_PRIMARY,clinical_R_full_fitted_Rloss_selected,0.1585911512374878,0.0380873680114746,0.1585911512374878,0.0,148,new TRAIN-fitted clinical effect with full_fitted nuisance,1,observed_R_loss,0.2588379525188979
+307,20260918,ORIGINAL_PRIMARY,clinical_R_full_fitted_trueDEV_selected_DIAGNOSTIC,0.1376236158173326,0.0174561589956283,0.1376236158173326,0.0,148,nondeployable true-DEV-CATE selection diagnostic,constant_limit,true_DEV_CATE_non_deployable,0.2712582720224
+307,20260918,ORIGINAL_PRIMARY,clinical_R_clinical_fitted_Rloss_selected,0.1810353398323059,0.0253872796893119,0.1810353398323059,0.0,148,new TRAIN-fitted clinical effect with clinical_fitted nuisance,1,observed_R_loss,0.2025496731353269
+307,20260918,ORIGINAL_PRIMARY,clinical_R_oracle_true_simulation_Rloss_selected,0.1996483653783798,0.0253872796893119,0.1996483653783798,0.0,148,new TRAIN-fitted clinical effect with oracle_true_simulation nuisance,1,observed_R_loss,0.184834861462916
+307,20260918,ORIGINAL_PRIMARY,archived_clinical_X,0.1562868241550076,0.0148990896720804,0.1562868241550076,0.0,148,archived TEST predictions; no refit,,none_archived,
+307,20260918,ORIGINAL_PRIMARY,archived_clinical_T,0.1614933543679354,0.0148990896720804,0.1614933543679354,0.0,148,archived TEST predictions; no refit,,none_archived,
+307,20260918,ORIGINAL_PRIMARY,archived_full_X,0.1587340339971944,0.0269391960189111,0.1587340339971944,0.0,148,archived TEST predictions; no refit,,none_archived,
+307,20260918,ORIGINAL_PRIMARY,archived_full_T,0.1739829925845964,0.0288382577143508,0.1739829925845964,0.0,148,archived TEST predictions; no refit,,none_archived,
+307,20260918,ORIGINAL_PRIMARY,archived_zero_effect,0.1623281194765304,0.1124514761833927,0.1623281194765304,0.0,148,archived TEST predictions; no refit,,none_archived,
+401,20260918,ORIGINAL_PRIMARY,clinical_R_full_fitted_Rloss_selected,0.1627250583217999,0.0174561589956283,0.1627250583217999,0.0,148,new TRAIN-fitted clinical effect with full_fitted nuisance,constant_limit,observed_R_loss,0.2696180648421031
+401,20260918,ORIGINAL_PRIMARY,clinical_R_full_fitted_trueDEV_selected_DIAGNOSTIC,0.1627250583217999,0.0174561589956283,0.1627250583217999,0.0,148,nondeployable true-DEV-CATE selection diagnostic,constant_limit,true_DEV_CATE_non_deployable,0.2696180648421031
+401,20260918,ORIGINAL_PRIMARY,clinical_R_clinical_fitted_Rloss_selected,0.1641212701797485,0.0325083881616592,0.1641212701797485,0.0,148,new TRAIN-fitted clinical effect with clinical_fitted nuisance,1,observed_R_loss,0.2520863267245694
+401,20260918,ORIGINAL_PRIMARY,clinical_R_oracle_true_simulation_Rloss_selected,0.1603998690843582,0.0325083881616592,0.1603998690843582,0.0,148,new TRAIN-fitted clinical effect with oracle_true_simulation nuisance,1,observed_R_loss,0.2353452488278783
+401,20260918,ORIGINAL_PRIMARY,archived_clinical_X,0.1657637462466491,0.0279443430300562,0.1657637462466491,0.0,148,archived TEST predictions; no refit,,none_archived,
+401,20260918,ORIGINAL_PRIMARY,archived_clinical_T,0.169948006285809,0.0390540842836836,0.169948006285809,0.0,148,archived TEST predictions; no refit,,none_archived,
+401,20260918,ORIGINAL_PRIMARY,archived_full_X,0.2144955031131118,0.0508897492558766,0.2144955031131118,0.0,148,archived TEST predictions; no refit,,none_archived,
+401,20260918,ORIGINAL_PRIMARY,archived_full_T,0.2160829497210303,0.0502537878244372,0.2160829497210303,0.0,148,archived TEST predictions; no refit,,none_archived,
+401,20260918,ORIGINAL_PRIMARY,archived_zero_effect,0.1623281194765304,0.1124514761833927,0.1623281194765304,0.0,148,archived TEST predictions; no refit,,none_archived,
+503,20260918,ORIGINAL_PRIMARY,clinical_R_full_fitted_Rloss_selected,0.1388524662908663,0.0174561589956283,0.1388524662908663,0.0,148,new TRAIN-fitted clinical effect with full_fitted nuisance,constant_limit,observed_R_loss,0.3004495466057769
+503,20260918,ORIGINAL_PRIMARY,clinical_R_full_fitted_trueDEV_selected_DIAGNOSTIC,0.1389072239398956,0.0174561589956283,0.1389072239398956,0.0,148,nondeployable true-DEV-CATE selection diagnostic,1000,true_DEV_CATE_non_deployable,0.3006086082292721
+503,20260918,ORIGINAL_PRIMARY,clinical_R_clinical_fitted_Rloss_selected,0.1450952926981903,0.0174561589956283,0.1450952926981903,0.0,148,new TRAIN-fitted clinical effect with clinical_fitted nuisance,constant_limit,observed_R_loss,0.228282263993074
+503,20260918,ORIGINAL_PRIMARY,clinical_R_oracle_true_simulation_Rloss_selected,0.1585030257701873,0.0174561589956283,0.1585030257701873,0.0,148,new TRAIN-fitted clinical effect with oracle_true_simulation nuisance,1,observed_R_loss,0.2199038322793746
+503,20260918,ORIGINAL_PRIMARY,archived_clinical_X,0.1622438642758799,0.0174561590624885,0.1622438642758799,0.0,148,archived TEST predictions; no refit,,none_archived,
+503,20260918,ORIGINAL_PRIMARY,archived_clinical_T,0.1644754363970731,0.0406444356816103,0.1644754363970731,0.0,148,archived TEST predictions; no refit,,none_archived,
+503,20260918,ORIGINAL_PRIMARY,archived_full_X,0.1944953684007374,0.0229254438138571,0.1944953684007374,0.0,148,archived TEST predictions; no refit,,none_archived,
+503,20260918,ORIGINAL_PRIMARY,archived_full_T,0.2149992883687718,0.0240749149886903,0.2149992883687718,0.0,148,archived TEST predictions; no refit,,none_archived,
+503,20260918,ORIGINAL_PRIMARY,archived_zero_effect,0.1623281194765304,0.1124514761833927,0.1623281194765304,0.0,148,archived TEST predictions; no refit,,none_archived,

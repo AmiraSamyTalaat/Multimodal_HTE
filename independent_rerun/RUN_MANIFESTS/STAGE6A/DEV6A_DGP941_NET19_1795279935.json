@@ -1,0 +1,14 @@
+{
+  "run_id": "DEV6A_DGP941_NET19_1795279935",
+  "stage": "STAGE6A_Q1_METHOD_DEVELOPMENT",
+  "dgp_seed": 941,
+  "net_seed": 19,
+  "split_used_for_candidate_evaluation": "DEV_ONLY",
+  "test_accessed": false,
+  "primary_grid_rerun": false,
+  "stage5a_rerun": false,
+  "device": "cpu",
+  "started": 1795279935.9854352,
+  "status": "COMPLETE",
+  "finished": 1795281660.8058171
+}

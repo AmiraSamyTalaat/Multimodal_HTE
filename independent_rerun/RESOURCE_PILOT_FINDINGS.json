@@ -1,0 +1,34 @@
+{
+  "outcomes_visible_before_protocol_adjustment": true,
+  "classification": "resource_budget_pilot_only",
+  "archive_sha256": "2b32661a4a0cc2aa0dcfdf0e5472ce8e2771a06e300c75d90a119d833aafac35",
+  "rows": [
+    {
+      "dgp_seed": 9001,
+      "effect_regime": "JOINT_MOLECULAR_SYNERGY",
+      "cm_expert_fits": 24,
+      "bag25_fits": 25,
+      "cm_steps": 18343,
+      "bag25_steps": 36972,
+      "cm_params": 126440,
+      "bag25_params": 171025,
+      "cm_seconds": 44.647207863999995,
+      "bag25_seconds": 75.55793989099999
+    },
+    {
+      "dgp_seed": 9001,
+      "effect_regime": "NO_INCREMENTAL_MOLECULAR_SIGNAL",
+      "cm_expert_fits": 24,
+      "bag25_fits": 25,
+      "cm_steps": 17612,
+      "bag25_steps": 36672,
+      "cm_params": 126440,
+      "bag25_params": 171025,
+      "cm_seconds": 50.052407802999994,
+      "bag25_seconds": 74.77085418600001
+    }
+  ],
+  "reason_not_main_comparator": "25 bag fits exceeded CM optimizer-step and deployed-parameter budgets; the later 20-fit protocol was chosen after inspecting this pilot.",
+  "kaggle_kernel": "prinprin/b01-p1-fair-neural-25fit-smoke-cpu",
+  "source_code_note": "fair_neural_25fit_pilot.py reconstructed from the local 20-fit derivative by reversing the budget-only changes; archived Kaggle run and raw results remain authoritative."
+}

@@ -1,0 +1,40 @@
+{
+  "batches": [
+    {
+      "slug": "b01-p1-independent-stage4-batch1-cpu",
+      "completed_utc": "2026-11-21T07:15:23+00:00",
+      "checkpoint_sha256": "3d68712d6caf9c1db7f58aabac8ade2db04ecb0d6bdd3c14b2313704903bc5cc",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 3
+    },
+    {
+      "slug": "b01-p1-independent-stage4-batch2-cpu",
+      "completed_utc": "2026-11-21T07:39:52+00:00",
+      "checkpoint_sha256": "ad24f2b6085aca55e419f1a9eb3c6f436b34174b11b6a56e97e11028c7ea2185",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 7
+    },
+    {
+      "slug": "b01-p1-independent-stage4-batch3-cpu",
+      "completed_utc": "2026-11-21T07:55:51+00:00",
+      "checkpoint_sha256": "689c32bfc15289c3f980b3eb4e620ca22ad5555ffb513beb2c7b0a459c2f4f05",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 11
+    },
+    {
+      "slug": "b01-p1-independent-stage4-batch4-cpu",
+      "completed_utc": "2026-11-21T08:14:06+00:00",
+      "checkpoint_sha256": "8ff0cb08fec3bbb916ec560c2a07fbd47d7b11b4365e443c692bf09c93f143dd",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 15
+    },
+    {
+      "slug": "b01-p1-independent-stage4-aggregate-cpu",
+      "completed_utc": "2026-11-21T08:15:23+00:00",
+      "checkpoint_sha256": "132c87c0883318a2643084afe928b26ba527d459c29f6c9b2f34d68a670bf0b5",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 18
+    }
+  ],
+  "updated_utc": "2026-11-21T08:16:20+00:00"
+}

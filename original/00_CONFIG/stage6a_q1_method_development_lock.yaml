@@ -1,0 +1,77 @@
+stage: STAGE6A_Q1_METHOD_DEVELOPMENT
+status: LOCKED_BEFORE_STAGE6A_RESULTS
+purpose: post_Stage5A_exploratory_method_development_only
+primary_stage3_stage5a_results: FROZEN_AND_PRESERVED
+test_split_access_in_stage6a: false
+development_evaluation_split: DEV_ONLY
+development_dgp_seeds:
+- 607
+- 719
+- 823
+- 941
+- 1061
+development_network_seeds:
+- 19
+- 37
+confirmatory_stage6b_dgp_seeds_locked_now_do_not_run_in_stage6a:
+- 1201
+- 1327
+- 1451
+- 1579
+- 1699
+confirmatory_stage6b_network_seeds_locked_now:
+- 17
+- 29
+- 43
+development_conditions:
+- cross_modal_interaction_plus_moderate_weak_overlap
+- severe_weak_overlap_stress_only
+- MCAR_40_from_primary_fit
+- MAR_CLINICAL_from_primary_fit
+- null_treatment_effect_negative_control
+candidate_methods:
+- CM_OSR_v1_frozen_reference
+- X_learner_frozen_reference
+- T_learner_frozen_reference
+- R_learner_frozen_reference
+- AOSR_X_gamma1
+- AOSR_X_gamma2
+- AOSR_R_gamma1
+- AOSR_R_gamma2
+- CMOSR_support_shrink_gamma1
+- CMOSR_support_shrink_gamma2
+new_method_family: AOSR_Anchored_Orthogonal_Support_Routing
+aosr_definition: tau_hat = tau_anchor + support^gamma * routed_residual_effect
+anchor_candidates:
+- X_learner
+- R_learner
+residual_target: cross_fitted_DR_phi_minus_cross_fitted_anchor_tau
+router_inputs_unchanged:
+- overlap
+- availability
+- density
+- OOF_reliability
+- expert_disagreement
+selection_rule:
+  type: lexicographic_no_weighted_score
+  gate_1_null_guard: candidate mean_abs_tau_hat on null <= 2.0 * min(X_learner,T_learner)
+    null mean_abs_tau_hat on the same Stage6A DEV runs
+  gate_2_point_estimation: mean root_PEHE across non-null Stage6A DEV conditions <=
+    1.10 * X_learner mean root_PEHE on the same runs
+  gate_3_original_method_improvement: candidate mean root_PEHE across non-null conditions
+    < frozen CM_OSR_v1
+  gate_4_cross_modal_value: candidate must use a nonzero routed residual and cannot
+    reduce identically to the anchor
+  tie_break: 'choose the simplest passing candidate: gamma1 before gamma2; X-anchor
+    before R-anchor only if performance gates are tied within 0.01 root_PEHE'
+if_no_candidate_passes: DO_NOT_FORCE_A_NEW_METHOD; retain CM_OSR as mechanism paper
+  and proceed with bounded claims / external validation
+forbidden:
+- rerun_or_replace_original_primary_gate
+- delete_unfavorable_Stage5A_results
+- use_original_TEST_to_choose_candidate
+- seed_search
+- change_DGP_coefficients_after_results
+- tune_support_threshold_on_TEST_or_TRIO
+- select_candidate_on_TRIO
+- claim_new_candidate_was_prespecified_before_Stage5A

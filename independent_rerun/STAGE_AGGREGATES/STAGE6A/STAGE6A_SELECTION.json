@@ -1,0 +1,14 @@
+{
+  "stage": "STAGE6A_Q1_METHOD_DEVELOPMENT",
+  "grid_complete": true,
+  "observed_pairs": 10,
+  "required_pairs": 10,
+  "candidate_selection_split": "DEV_ONLY",
+  "test_accessed_for_selection": false,
+  "stage3_primary_preserved": true,
+  "stage5a_preserved": true,
+  "null_guard_threshold": 0.21849678605794898,
+  "selected_candidate": "AOSR_X_gamma2",
+  "status": "CANDIDATE_FROZEN_FOR_STAGE6B",
+  "next": "STAGE6B_CONFIRMATORY_FRESH_SEEDS_TEST_ONCE"
+}

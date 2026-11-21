@@ -1,0 +1,25 @@
+{
+  "stage": "BASELINE_POSTREVIEW",
+  "status": "COMPLETE",
+  "started_utc": "2026-11-20T15:35:36.086623+00:00",
+  "finished_utc": "2026-11-20T15:37:27.656296+00:00",
+  "dgp_seeds": [
+    101,
+    211,
+    307,
+    401,
+    503
+  ],
+  "network_seeds": [
+    17,
+    29,
+    43
+  ],
+  "n_dgp_independent": 5,
+  "n_original_runs": 15,
+  "n_test_per_run": 148,
+  "source_data_sha256": "e94166a00268aab5cb99cb74866ed81771a96ba88c9dc4368107bd0795081e1a",
+  "code_sha256": "bb2867758b018dce1551d6e7ad22d7164b601eb92e16aa0ad955da2b0178e0e7",
+  "errors": [],
+  "note": "Post-review analysis; oracle test-CATE constant is nondeployable; no original result was modified."
+}

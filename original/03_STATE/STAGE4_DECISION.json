@@ -1,0 +1,43 @@
+{
+  "stage": "RESULTS_AUDITOR_STATISTICIAN",
+  "primary_gate": {
+    "mean": -1.9679627259572345,
+    "ci95_low": -2.199145666758219,
+    "ci95_high": -1.691622519493103,
+    "n_clusters": 5,
+    "bootstrap_B": 10000,
+    "comparison": "CM_OSR - early_fusion_DR_capacity_matched root_PEHE",
+    "direction": "negative_favors_CM_OSR",
+    "required_seed_pairs": 15,
+    "observed_seed_pairs": 15,
+    "required_dgp_clusters": 5,
+    "observed_dgp_clusters": 5,
+    "grid_complete": true,
+    "primary_gate": "PASS"
+  },
+  "core_grid_complete": true,
+  "decision": "PROCEED_TO_PRESPECIFIED_SECONDARY_AND_REAL_TRIAL_VALIDATION_WITH_CLAIM_LIMITATION",
+  "scientific_settings_changed": false,
+  "no_rerun_primary_grid": true,
+  "major_interpretation_flag": {
+    "issue": "X_learner and T_learner outperform CM_OSR on primary regime",
+    "action": "report transparently; do not alter locked primary setup; test already-prespecified H2/H3 gates"
+  },
+  "prohibited_next_actions": [
+    "seed_search",
+    "change_primary_DGP",
+    "change_primary_endpoint",
+    "change_primary_comparator",
+    "retune_on_test",
+    "claim_overall_SOTA"
+  ],
+  "required_next_actions": [
+    "prespecified_secondary_stress_suite",
+    "selective_and_overlap_stratified_analysis",
+    "negative_control",
+    "CHER_LOB_nested_crossfit",
+    "frozen_TRIO_US_B07_external_validation",
+    "reviewer_from_hell",
+    "final_Q1_gate"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "dgp_seed": 101,
+  "true_cate_test_sd": 0.13162942230701447,
+  "true_cate_test_mean": 0.09499531984329224,
+  "propensity_true_clip_fraction": 0.016304347826086956,
+  "outcome_mu1_clip_fraction": 0.036684782608695655,
+  "outcome_clipping_sign_reversal_fraction": 0.0,
+  "train_treatment_prevalence": 0.49206349206349204,
+  "dev_treatment_prevalence": 0.4489795918367347,
+  "test_treatment_prevalence": 0.46621621621621623
+}

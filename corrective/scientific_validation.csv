@@ -1,0 +1,16 @@
+check,pass_check,detail
+original_and_snapshot_immutable,True,"309 files; snapshot mismatches 0, original mismatches 0, missing 0"
+private_kaggle_core_code_matches_snapshot,True,9/9 downloaded core modules match SHA-256
+clinical_adjustment_complete,True,5/5
+nonoracle_tuning_complete,True,5/5
+fixed_dgp_splits_complete,True,72/72
+fair_neural_complete,True,24/24
+fixed_dgp_truth_unchanged,True,24 seed-regime pairs; three resplits each
+kaggle_windows_numerical_match,True,24 units; max zero-effect Root-PEHE difference 1.29e-09; exact byte hash match 0/24
+deployed_parameter_match,True,bag/CM deployed parameter ratio range 1.0046–1.0046; optimizer steps remain unequal
+clinical_metrics_finite,True,45 rows; Root-PEHE range 0.1366–0.2161
+nonoracle_metrics_finite,True,40 rows; Root-PEHE range 0.1478–0.225
+fixed_metrics_finite,True,504 rows; Root-PEHE range 0.03328–0.2042
+fair_metrics_finite,True,264 rows; Root-PEHE range 0.06221–3.615
+fair_dgp_cluster_ci,True,22 summary rows; DGP counts [np.int64(12)]
+reporting_definitions,True,PASS

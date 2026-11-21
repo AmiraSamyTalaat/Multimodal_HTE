@@ -1,0 +1,49 @@
+{
+  "stage": "stage7b",
+  "backend": "cpu",
+  "batches": [
+    {
+      "slug": "b01-p1-independent-stage7b-smoke-cpu",
+      "completed_utc": "2026-11-21T07:49:56+00:00",
+      "checkpoint_sha256": "587b457e72b2206426069908efc9463c6543cad92645cfc89e8de9b113dc8182",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 1
+    },
+    {
+      "slug": "b01-p1-independent-stage7b-batch1-cpu",
+      "completed_utc": "2026-11-21T08:09:28+00:00",
+      "checkpoint_sha256": "8847846d08069a533ac143c0ecfa0fc2fa6b432d1dc0f096caa1eeb0fb069654",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 4
+    },
+    {
+      "slug": "b01-p1-independent-stage7b-batch2-cpu",
+      "completed_utc": "2026-11-21T08:29:29+00:00",
+      "checkpoint_sha256": "e2b3c0f7cd44a4c9ba79cae2145c51e44f74dab6da1cd50651712e92ffab83fe",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 7
+    },
+    {
+      "slug": "b01-p1-independent-stage7b-batch3-cpu",
+      "completed_utc": "2026-11-21T08:49:30+00:00",
+      "checkpoint_sha256": "473b983f210d149cdc16cbf7d448e09f64d4cedf91af88d53c7048247d4d0aa4",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 10
+    },
+    {
+      "slug": "b01-p1-independent-stage7b-batch4-cpu",
+      "completed_utc": "2026-11-21T09:03:18+00:00",
+      "checkpoint_sha256": "5bbf3d8f4f29413fad2c278c7caf8d50585a449f07d12c0ee0594803c8b76ea2",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 12
+    },
+    {
+      "slug": "b01-p1-independent-stage7b-aggregate-cpu",
+      "completed_utc": "2026-11-21T09:04:35+00:00",
+      "checkpoint_sha256": "5b1daa7aefc66a3b7aa124f7bd795c53c5207eec94b8ced50529fd8fe4b209bd",
+      "scientific_comparison_pass": false,
+      "comparison_failures": 13
+    }
+  ],
+  "updated_utc": "2026-11-21T09:05:24+00:00"
+}

@@ -1,0 +1,11 @@
+dgp_seed,method,root_pehe,policy_regret,network_repeats
+101,DR_Ridge_fitted_extended_DEV_selected,0.2753623674313227,0.0174561589956283,3
+101,DR_Ridge_oracle_extended_DEV_selected,0.1333794891834259,0.0174561589956283,3
+211,DR_Ridge_fitted_extended_DEV_selected,0.2306749324003855,0.04912126561005906,3
+211,DR_Ridge_oracle_extended_DEV_selected,0.1448626071214676,0.0174561589956283,3
+307,DR_Ridge_fitted_extended_DEV_selected,0.2791082859039306,0.08078637222448982,3
+307,DR_Ridge_oracle_extended_DEV_selected,0.1317143229194041,0.0174561589956283,3
+401,DR_Ridge_fitted_extended_DEV_selected,0.260931521654129,0.0174561589956283,3
+401,DR_Ridge_oracle_extended_DEV_selected,0.1384750500022917,0.0174561589956283,3
+503,DR_Ridge_fitted_extended_DEV_selected,0.22103654344876603,0.04912126561005906,3
+503,DR_Ridge_oracle_extended_DEV_selected,0.1505656093358993,0.0174561589956283,3
